@@ -35,10 +35,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "timeDetail" {
+            let time = sender as? AlarmTime
+            if time != nil {
+                let detailController = segue.destination as? TimeDetailViewControllerViewController
+                if detailController != nil {
+                    detailController?.timeDetail = time
+                }
+            }
+        }
+    }
+    
 }
-
-extension ViewController: UITableViewDelegate{}
 
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,3 +66,9 @@ extension ViewController: UITableViewDataSource{
     
 }
 
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "timeDetail", sender: self.timeSet[indexPath.row])
+    }
+}
