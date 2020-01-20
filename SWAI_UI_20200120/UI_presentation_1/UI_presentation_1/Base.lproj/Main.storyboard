@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEq-6O-eVK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEq-6O-eVK">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-y0-POl">
-                                <rect key="frame" x="-20" y="-10" width="504" height="916"/>
+                                <rect key="frame" x="-20" y="-10" width="504.00000000000023" height="916"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="----------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3z-WC-sKL">
                                 <rect key="frame" x="101" y="535" width="212" height="45"/>
@@ -271,16 +271,16 @@
             </objects>
             <point key="canvasLocation" x="2343" y="1638"/>
         </scene>
-        <!--View Controller-->
+        <!--Dontcare Mode-->
         <scene sceneID="mVf-h2-v4V">
             <objects>
-                <viewController id="8Kl-AC-C8K" sceneMemberID="viewController">
+                <viewController id="8Kl-AC-C8K" customClass="DontcareMode" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAX-W9-qEh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="Hgx-Hu-n8I">
-                                <rect key="frame" x="-20" y="80" width="504" height="826"/>
+                                <rect key="frame" x="-20" y="80" width="504.00000000000023" height="826"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="*careful*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-OO-gmu">
                                 <rect key="frame" x="10" y="280" width="394" height="27"/>
@@ -355,10 +355,10 @@
             </objects>
             <point key="canvasLocation" x="2724.6376811594205" y="506.91964285714283"/>
         </scene>
-        <!--취침모드-->
+        <!--Sleeping Mode-->
         <scene sceneID="HYg-qI-Fdw">
             <objects>
-                <viewController title="취침모드" id="ght-ac-teK" sceneMemberID="viewController">
+                <viewController id="ght-ac-teK" customClass="SleepingMode" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHX-OG-L6p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -510,6 +510,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qdZ-ZP-9lb"/>
+        <segue reference="gJG-oQ-N0q"/>
     </inferredMetricsTieBreakers>
 </document>
