@@ -20,10 +20,10 @@ class ViewController: UIViewController {
             firstcell(dates: "2020/01/16", images: "data2"),
             firstcell(dates: "2020/01/17", images: "data3")
     ]
-    
+    let testForcrash = 0
     @IBOutlet weak var tableView: UITableView!
     //    let dates = ["2020/01/15","2020/01/16"," 2020/01/17"]
-//    let images = ["data1","data2","data3"]
+    //    let images = ["data1","data2","data3"]
 }
 
 extension ViewController: UITableViewDataSource {
