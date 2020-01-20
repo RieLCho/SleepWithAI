@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23AE8D7B15AE823A76B41ACF746FC91D /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B882018E3711427988391B0E508196 /* MidPointCircularSlider.swift */; };
+		33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F3840A2EBC373D629FBC9CFE801C8 /* CircularSliderHelper.swift */; };
+		4EC824BC05C96AF43C9741476EB67810 /* Pods-UI_presentation_1-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9A3C25DD5ABDD086B50E8D7BD52C5F /* Pods-UI_presentation_1-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		701C2F5A876C21D45629A096FDC17081 /* HGCircularSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5E53894E63835EA6039089A95A043 /* HGCircularSlider-dummy.m */; };
+		731C3F63303F2F89361294EEE3C30AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D5E466C9BEE9CF508910C3D1782A8382 /* HGCircularSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 442169E7CAB216B2D1F54B387D51CF30 /* HGCircularSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4553899BF4E8DC7BC05F2CD2BA6D32 /* Pods-UI_presentation_1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB7FD04804B25BE29D7D02800B3D2 /* Pods-UI_presentation_1-dummy.m */; };
+		E4606FAE0CFBA2C4BA46647307ACD499 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0B9BBAE00C169E716488F337F68ABB /* RangeCircularSlider.swift */; };
+		E96E87B8CE55AD88940EC4EE401978F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F4927D68F6D455229FC1D386DEA83466 /* CircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C7B18A39EE396D7B7E897831AD97E /* CircularSlider+Draw.swift */; };
+		FFAA32FE26C07E3C3486F608F471FC8A /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA333A54D423C53AEEF78415BA866367 /* CircularSlider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7929797FD2E593BCFCF71B189165C26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82EEAE7DB07C6F17150BFE2EAD014CB2;
+			remoteInfo = HGCircularSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F8E11E356A1F487754BA7E1E120BDC3 /* Pods-UI_presentation_1.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UI_presentation_1.modulemap"; sourceTree = "<group>"; };
+		1BD6C6EC43DEBD21BF46E2015E2F8BD8 /* HGCircularSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGCircularSlider.modulemap; sourceTree = "<group>"; };
+		1CD5E53894E63835EA6039089A95A043 /* HGCircularSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGCircularSlider-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		332C7B18A39EE396D7B7E897831AD97E /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/CircularSlider+Draw.swift"; sourceTree = "<group>"; };
+		3B0A1DE15AD7607CE16D89661786DBA2 /* Pods-UI_presentation_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_presentation_1.release.xcconfig"; sourceTree = "<group>"; };
+		3CE45A2540A66ACA0CD1E4B0CB2AAACC /* Pods-UI_presentation_1-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UI_presentation_1-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F9A3C25DD5ABDD086B50E8D7BD52C5F /* Pods-UI_presentation_1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UI_presentation_1-umbrella.h"; sourceTree = "<group>"; };
+		43BA87E76A36D0FBC4FB0DB77000B2E1 /* Pods-UI_presentation_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_presentation_1.debug.xcconfig"; sourceTree = "<group>"; };
+		442169E7CAB216B2D1F54B387D51CF30 /* HGCircularSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-umbrella.h"; sourceTree = "<group>"; };
+		5C0B9BBAE00C169E716488F337F68ABB /* RangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeCircularSlider.swift; path = HGCircularSlider/Classes/RangeCircularSlider.swift; sourceTree = "<group>"; };
+		607DB7FD04804B25BE29D7D02800B3D2 /* Pods-UI_presentation_1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UI_presentation_1-dummy.m"; sourceTree = "<group>"; };
+		82994D7792F8D3001594C6199AB4981A /* Pods-UI_presentation_1-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UI_presentation_1-Info.plist"; sourceTree = "<group>"; };
+		8EDDA37951A45503CC2E5BF56383059F /* HGCircularSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-prefix.pch"; sourceTree = "<group>"; };
+		8F054274C49D85AE36042F5D4EFCCC96 /* Pods_UI_presentation_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UI_presentation_1.framework; path = "Pods-UI_presentation_1.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6D0336EA97F15E5BF3BC5C3438A769C /* HGCircularSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.xcconfig; sourceTree = "<group>"; };
+		AA333A54D423C53AEEF78415BA866367 /* CircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSlider.swift; path = HGCircularSlider/Classes/CircularSlider.swift; sourceTree = "<group>"; };
+		BB9F3840A2EBC373D629FBC9CFE801C8 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
+		BFDC3204CD5710D15484473A99AA8A56 /* Pods-UI_presentation_1-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UI_presentation_1-acknowledgements.plist"; sourceTree = "<group>"; };
+		C539672E6D0DF74733CB5117389D1024 /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
+		CDBB2FE03EBE0E1423DE1E761C97F83D /* Pods-UI_presentation_1-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_presentation_1-frameworks.sh"; sourceTree = "<group>"; };
+		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider.framework; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B882018E3711427988391B0E508196 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MidPointCircularSlider.swift; path = HGCircularSlider/Classes/MidPointCircularSlider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8836FFF572C906DD5F5AD4720E5148C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				731C3F63303F2F89361294EEE3C30AE8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E33AA61865BAA0D01C8929DBE89F87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E87B8CE55AD88940EC4EE401978F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1097D12F82ADB396786DC40BF77D4D9A /* Pods-UI_presentation_1 */ = {
+			isa = PBXGroup;
+			children = (
+				0F8E11E356A1F487754BA7E1E120BDC3 /* Pods-UI_presentation_1.modulemap */,
+				3CE45A2540A66ACA0CD1E4B0CB2AAACC /* Pods-UI_presentation_1-acknowledgements.markdown */,
+				BFDC3204CD5710D15484473A99AA8A56 /* Pods-UI_presentation_1-acknowledgements.plist */,
+				607DB7FD04804B25BE29D7D02800B3D2 /* Pods-UI_presentation_1-dummy.m */,
+				CDBB2FE03EBE0E1423DE1E761C97F83D /* Pods-UI_presentation_1-frameworks.sh */,
+				82994D7792F8D3001594C6199AB4981A /* Pods-UI_presentation_1-Info.plist */,
+				3F9A3C25DD5ABDD086B50E8D7BD52C5F /* Pods-UI_presentation_1-umbrella.h */,
+				43BA87E76A36D0FBC4FB0DB77000B2E1 /* Pods-UI_presentation_1.debug.xcconfig */,
+				3B0A1DE15AD7607CE16D89661786DBA2 /* Pods-UI_presentation_1.release.xcconfig */,
+			);
+			name = "Pods-UI_presentation_1";
+			path = "Target Support Files/Pods-UI_presentation_1";
+			sourceTree = "<group>";
+		};
+		56442779D1097738758161536B4CE647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F552E442D599393BDBD3358AB21CCB /* HGCircularSlider */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9376B177B9B38A4374A922DEC38755E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */,
+				8F054274C49D85AE36042F5D4EFCCC96 /* Pods_UI_presentation_1.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6752C905293DEE584802DCEC175A7B3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BD6C6EC43DEBD21BF46E2015E2F8BD8 /* HGCircularSlider.modulemap */,
+				A6D0336EA97F15E5BF3BC5C3438A769C /* HGCircularSlider.xcconfig */,
+				1CD5E53894E63835EA6039089A95A043 /* HGCircularSlider-dummy.m */,
+				C539672E6D0DF74733CB5117389D1024 /* HGCircularSlider-Info.plist */,
+				8EDDA37951A45503CC2E5BF56383059F /* HGCircularSlider-prefix.pch */,
+				442169E7CAB216B2D1F54B387D51CF30 /* HGCircularSlider-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HGCircularSlider";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				56442779D1097738758161536B4CE647 /* Pods */,
+				9376B177B9B38A4374A922DEC38755E4 /* Products */,
+				F4381C52D86424244656B25AA8ECEA21 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5F552E442D599393BDBD3358AB21CCB /* HGCircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				AA333A54D423C53AEEF78415BA866367 /* CircularSlider.swift */,
+				332C7B18A39EE396D7B7E897831AD97E /* CircularSlider+Draw.swift */,
+				BB9F3840A2EBC373D629FBC9CFE801C8 /* CircularSliderHelper.swift */,
+				E4B882018E3711427988391B0E508196 /* MidPointCircularSlider.swift */,
+				5C0B9BBAE00C169E716488F337F68ABB /* RangeCircularSlider.swift */,
+				B6752C905293DEE584802DCEC175A7B3 /* Support Files */,
+			);
+			name = HGCircularSlider;
+			path = HGCircularSlider;
+			sourceTree = "<group>";
+		};
+		F4381C52D86424244656B25AA8ECEA21 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1097D12F82ADB396786DC40BF77D4D9A /* Pods-UI_presentation_1 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2BFF424366222E7784E241AF028E7FC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EC824BC05C96AF43C9741476EB67810 /* Pods-UI_presentation_1-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767C99A70BD3DBCFB9160917392C8EB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E466C9BEE9CF508910C3D1782A8382 /* HGCircularSlider-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 830DCB0A097257D0F9E1D557676CFDE1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
+			buildPhases = (
+				767C99A70BD3DBCFB9160917392C8EB6 /* Headers */,
+				6978B58842DD4999449ECEB578D444D9 /* Sources */,
+				8E33AA61865BAA0D01C8929DBE89F87E /* Frameworks */,
+				5F9A73F81E071C4227DCD8F475E6B09B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HGCircularSlider;
+			productName = HGCircularSlider;
+			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA13738C9A1F245F5EC57E10F2DB1B6C /* Pods-UI_presentation_1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7120CD2241899C88BB372783CA8869 /* Build configuration list for PBXNativeTarget "Pods-UI_presentation_1" */;
+			buildPhases = (
+				2BFF424366222E7784E241AF028E7FC2 /* Headers */,
+				DC34BEB53DDB6321598C6EF5DC7E881D /* Sources */,
+				8836FFF572C906DD5F5AD4720E5148C9 /* Frameworks */,
+				757817A6DA2C1039EA5DE28CD1F5CE1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC1F734C7EBAE1DB1F1D40AC313EF699 /* PBXTargetDependency */,
+			);
+			name = "Pods-UI_presentation_1";
+			productName = "Pods-UI_presentation_1";
+			productReference = 8F054274C49D85AE36042F5D4EFCCC96 /* Pods_UI_presentation_1.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9376B177B9B38A4374A922DEC38755E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */,
+				CA13738C9A1F245F5EC57E10F2DB1B6C /* Pods-UI_presentation_1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F9A73F81E071C4227DCD8F475E6B09B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757817A6DA2C1039EA5DE28CD1F5CE1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6978B58842DD4999449ECEB578D444D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4927D68F6D455229FC1D386DEA83466 /* CircularSlider+Draw.swift in Sources */,
+				FFAA32FE26C07E3C3486F608F471FC8A /* CircularSlider.swift in Sources */,
+				33129701D6A331F40BEC83251A91EFE6 /* CircularSliderHelper.swift in Sources */,
+				701C2F5A876C21D45629A096FDC17081 /* HGCircularSlider-dummy.m in Sources */,
+				23AE8D7B15AE823A76B41ACF746FC91D /* MidPointCircularSlider.swift in Sources */,
+				E4606FAE0CFBA2C4BA46647307ACD499 /* RangeCircularSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC34BEB53DDB6321598C6EF5DC7E881D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4553899BF4E8DC7BC05F2CD2BA6D32 /* Pods-UI_presentation_1-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC1F734C7EBAE1DB1F1D40AC313EF699 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HGCircularSlider;
+			target = 82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */;
+			targetProxy = 7929797FD2E593BCFCF71B189165C26D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		113DA6190BB45721E27C74C0ECBF3DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BA87E76A36D0FBC4FB0DB77000B2E1 /* Pods-UI_presentation_1.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E29F3326E1A38BEC5A7198E88D647AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0A1DE15AD7607CE16D89661786DBA2 /* Pods-UI_presentation_1.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8EA26ED18F8407626860EF4D2CA9E6E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D0336EA97F15E5BF3BC5C3438A769C /* HGCircularSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
+				PRODUCT_MODULE_NAME = HGCircularSlider;
+				PRODUCT_NAME = HGCircularSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DAE817FB5393244135FCAA32A0CDC4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D0336EA97F15E5BF3BC5C3438A769C /* HGCircularSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
+				PRODUCT_MODULE_NAME = HGCircularSlider;
+				PRODUCT_NAME = HGCircularSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		830DCB0A097257D0F9E1D557676CFDE1 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE817FB5393244135FCAA32A0CDC4F8 /* Debug */,
+				8EA26ED18F8407626860EF4D2CA9E6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC7120CD2241899C88BB372783CA8869 /* Build configuration list for PBXNativeTarget "Pods-UI_presentation_1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				113DA6190BB45721E27C74C0ECBF3DD5 /* Debug */,
+				6E29F3326E1A38BEC5A7198E88D647AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
