@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import HGCircularSlider
 
 class ViewController: UIViewController {
 
 
+    @IBOutlet weak var CircularSlider: UIView!
+    
     let dates = ["2020/01/15","2020/01/16"," 2020/01/17"]
     let images = ["data1","data2","data3"]
     

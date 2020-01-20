@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,13 +58,13 @@
 				FBC047A87A172A11A2050EBA /* Pods-UI_presentation_1.debug.xcconfig */,
 				E1B221E90B61881A72920678 /* Pods-UI_presentation_1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		A6C4232023CF0FE90083F73C = {
 			isa = PBXGroup;
 			children = (
+				B5ADEC7623D5793300E01C43 /* Views */,
 				A6C4232B23CF0FE90083F73C /* UI_presentation_1 */,
 				A6C4232A23CF0FE90083F73C /* Products */,
 				6AF752BC1583BEE0FE090262 /* Pods */,
@@ -86,13 +86,20 @@
 				A6C4232C23CF0FE90083F73C /* AppDelegate.swift */,
 				A6C4232E23CF0FE90083F73C /* SceneDelegate.swift */,
 				A6C4233023CF0FE90083F73C /* ViewController.swift */,
-				A6C4233223CF0FE90083F73C /* Main.storyboard */,
 				A6C4233523CF0FEA0083F73C /* Assets.xcassets */,
-				A6C4233723CF0FEA0083F73C /* LaunchScreen.storyboard */,
 				A6C4233A23CF0FEA0083F73C /* Info.plist */,
 				E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */,
 			);
 			path = UI_presentation_1;
+			sourceTree = "<group>";
+		};
+		B5ADEC7623D5793300E01C43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4233223CF0FE90083F73C /* Main.storyboard */,
+				A6C4233723CF0FEA0083F73C /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
