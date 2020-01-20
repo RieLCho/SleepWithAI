@@ -7,39 +7,36 @@
 //
 
 import UIKit
-import HGCircularSlider
 
+struct firstcell {
+    var dates: String
+    var images: String?
+}
 class ViewController: UIViewController {
-
-
-    @IBOutlet weak var CircularSlider: UIView!
+    let test:[firstcell]
+        = [
+            firstcell(dates: "2020/01/15", images: "data1"),
+            firstcell(dates: "2020/01/16", images: "data2"),
+            firstcell(dates: "2020/01/17", images: "data3")
+    ]
     
-    let dates = ["2020/01/15","2020/01/16"," 2020/01/17"]
-    let images = ["data1","data2","data3"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableview.dataSource = self
-        self.tableview.delegate = self
-
-        // Do any additional setup after loading the view.
-    }
-    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    //    let dates = ["2020/01/15","2020/01/16"," 2020/01/17"]
+//    let images = ["data1","data2","data3"]
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dates.count
+        return self.test.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCustomCell", for: indexPath) as! FirstCustomCell
-        
-        cell.DateLabel.text = dates[indexPath.row]
-        cell.DateChartImageView.image = UIImage(named: images[indexPath.row])
+        let rowData = self.test[indexPath.row]
+        cell.DateLabel.text = rowData.dates
+        cell.DateChartImageView.image = UIImage(named: rowData.images!)
         return cell
     }
 }
+
 extension ViewController: UITableViewDelegate {
-    
 }

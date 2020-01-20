@@ -1,2 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework
 ${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
