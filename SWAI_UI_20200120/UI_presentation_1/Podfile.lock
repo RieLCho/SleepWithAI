@@ -1,37 +1,16 @@
 PODS:
-  - Charts (3.4.0):
-    - Charts/Core (= 3.4.0)
-  - Charts/Core (3.4.0)
-  - ChartsRealm (3.4.0):
-    - Charts (~> 3.4.0)
-    - RealmSwift (~> 3.18.0)
   - HGCircularSlider (2.0.0)
-  - Realm (3.18.0):
-    - Realm/Headers (= 3.18.0)
-  - Realm/Headers (3.18.0)
-  - RealmSwift (3.18.0):
-    - Realm (= 3.18.0)
 
 DEPENDENCIES:
-  - Charts
-  - ChartsRealm
   - HGCircularSlider (~> 2.0.0)
 
 SPEC REPOS:
   trunk:
-    - Charts
-    - ChartsRealm
     - HGCircularSlider
-    - Realm
-    - RealmSwift
 
 SPEC CHECKSUMS:
-  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
-  ChartsRealm: 2ae8bf478211a94b3b6dd20738db0b9b132eb66b
   HGCircularSlider: 92e2ee098c814709f455b8f46cd9008147f6a869
-  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
-  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
 
-PODFILE CHECKSUM: 1dd2204c7d47187c5212a8f175d71e234baa0881
+PODFILE CHECKSUM: 859669799c47d8323e5f5679bba8952c5023a59d
 
 COCOAPODS: 1.8.4
