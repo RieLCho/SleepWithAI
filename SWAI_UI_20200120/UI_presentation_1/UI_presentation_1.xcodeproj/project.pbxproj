@@ -29,7 +29,7 @@
 		A636D3B923D5B1860040FC04 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
 		A636D3BB23D5B2740040FC04 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		A6A7046023D691450027504B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A6C4232923CF0FE90083F73C /* UI_presentation_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI_presentation_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C4232923CF0FE90083F73C /* SleepWithAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepWithAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C4232C23CF0FE90083F73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C4232E23CF0FE90083F73C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A6C4233023CF0FE90083F73C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		A6C4232A23CF0FE90083F73C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A6C4232923CF0FE90083F73C /* UI_presentation_1.app */,
+				A6C4232923CF0FE90083F73C /* SleepWithAI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			);
 			name = UI_presentation_1;
 			productName = UI_presentation_1;
-			productReference = A6C4232923CF0FE90083F73C /* UI_presentation_1.app */;
+			productReference = A6C4232923CF0FE90083F73C /* SleepWithAI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -384,8 +384,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SWAI.UI-presentation-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwithai;
+				PRODUCT_NAME = SleepWithAI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -403,8 +403,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SWAI.UI-presentation-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sleepwithai;
+				PRODUCT_NAME = SleepWithAI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
