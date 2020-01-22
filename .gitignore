@@ -110,3 +110,6 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/xcode,swift,cocoapods
+.DS_Store
+SWAI_UI_20200120/.DS_Store
+*.xcuserstate
