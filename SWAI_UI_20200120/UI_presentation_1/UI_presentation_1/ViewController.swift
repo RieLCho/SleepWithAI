@@ -9,32 +9,39 @@
 import UIKit
 
 
-struct firstcell {
-    var dates: String
-    var images: String?
-}
+
 class ViewController: UIViewController {
-    let test:[firstcell]
-        = [
-            firstcell(dates: "2020/01/15", images: "data1"),
-            firstcell(dates: "2020/01/16", images: "data2"),
-            firstcell(dates: "2020/01/17", images: "data3")
-    ]
-    let testForcrash = 0
     @IBOutlet weak var tableView: UITableView!
-    //    let dates = ["2020/01/15","2020/01/16"," 2020/01/17"]
-    //    let images = ["data1","data2","data3"]
+    var index: Int?
+    var data =
+        [
+        ["⚽️ Soccer",       "⛳️ Golf",      "🏀 Basketball",    "🏈 American Football",
+         "⚾️ Baseball",     "🎾 Tennis",    "🏐 Valleyball",    "🏸 Badminton"],
+        ["🍎 Apple",        "🍐 Pear",      "🍓 Strawberry",    "🥑 Avocado",
+         "🍌 Banana",       "🍇 Grape",     "🍈 Melon",         "🍊 Orange",
+         "🍑 Peach",        "🥝 Kiwi"]
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let nibName = UINib(nibName: "CustomCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "customCell")
+    }
+    
+    @IBAction func switchSegmentedCtrlViewAction(_ sender: UISegmentedControl) {
+        self.index = sender.selectedSegmentIndex
+        tableView.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.test.count
+        return data[self.index ?? 0].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCustomCell", for: indexPath) as! FirstCustomCell
-        let rowData = self.test[indexPath.row]
-        cell.DateLabel.text = rowData.dates
-        cell.DateChartImageView.image = UIImage(named: rowData.images!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomCell
+        let str = data[self.index ?? 0][indexPath.row].components(separatedBy: " ")
+        cell.custominit(text: str[1], accessoryText: str[0])
         return cell
     }
 }
