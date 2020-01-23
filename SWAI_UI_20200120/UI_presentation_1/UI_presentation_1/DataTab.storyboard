@@ -58,11 +58,28 @@
                     <navigationItem key="navigationItem" id="WJD-yt-MAV"/>
                     <connections>
                         <outlet property="tableView" destination="CLZ-mA-0en" id="vaM-77-N20"/>
+                        <segue destination="bIo-vU-4iY" kind="show" id="Bfc-yI-R9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HM-TV-D0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="1635.832083958021"/>
+        </scene>
+        <!--Data Tab Detail View Controller-->
+        <scene sceneID="y8b-xv-pfK">
+            <objects>
+                <viewController id="bIo-vU-4iY" customClass="DataTabDetailViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dz-2b-QB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="C7w-bD-fLM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MGM-Uq-pKR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-tb-KA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="1636"/>
         </scene>
         <!--Data-->
         <scene sceneID="taR-MI-ub8">

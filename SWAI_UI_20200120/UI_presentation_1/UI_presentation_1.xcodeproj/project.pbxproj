@@ -88,11 +88,11 @@
 				A6C4232C23CF0FE90083F73C /* AppDelegate.swift */,
 				A6C4232E23CF0FE90083F73C /* SceneDelegate.swift */,
 				A6C4233023CF0FE90083F73C /* ViewController.swift */,
-				A6C4233523CF0FEA0083F73C /* Assets.xcassets */,
-				A6C4233A23CF0FEA0083F73C /* Info.plist */,
 				E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */,
 				A6A7046023D691450027504B /* MainViewController.swift */,
 				A6EB14F123D6D68A00F02242 /* KindsOfSegues.swift */,
+				A6C4233523CF0FEA0083F73C /* Assets.xcassets */,
+				A6C4233A23CF0FEA0083F73C /* Info.plist */,
 			);
 			path = UI_presentation_1;
 			sourceTree = "<group>";

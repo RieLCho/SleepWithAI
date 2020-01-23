@@ -5,10 +5,7 @@
 //  Created by 임연지 on 2020/01/15.
 //  Copyright © 2020 임연지. All rights reserved.
 //
-
 import UIKit
-
-
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -21,13 +18,11 @@ class ViewController: UIViewController {
          "🍌 Banana",       "🍇 Grape",     "🍈 Melon",         "🍊 Orange",
          "🍑 Peach",        "🥝 Kiwi"]
     ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nibName = UINib(nibName: "CustomCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "customCell")
     }
-    
     @IBAction func switchSegmentedCtrlViewAction(_ sender: UISegmentedControl) {
         self.index = sender.selectedSegmentIndex
         tableView.reloadData()
