@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iHr-7R-N9j">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VIW-pg-54N">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qqr-dL-yrt" customClass="ViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J41-zE-UbF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="oeg-CS-2jY">
+                                <rect key="frame" x="-71" y="-229" width="835" height="1113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m7X-os-D6V">
+                                <rect key="frame" x="20" y="68" width="339" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9tx-JU-uLd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Day."/>
+                                    <segment title="Month"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchSegmentedCtrlViewAction:" destination="qqr-dL-yrt" eventType="valueChanged" id="oc4-7K-KJm"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLZ-mA-0en">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qqr-dL-yrt" id="FEc-hm-jZW"/>
+                                    <outlet property="delegate" destination="qqr-dL-yrt" id="nB5-gA-pfn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CLZ-mA-0en" firstAttribute="centerX" secondItem="J41-zE-UbF" secondAttribute="centerX" id="6aL-Ym-bok"/>
+                            <constraint firstItem="CLZ-mA-0en" firstAttribute="bottom" secondItem="wPu-lx-YNa" secondAttribute="bottom" id="E8s-TG-yRQ"/>
+                            <constraint firstItem="m7X-os-D6V" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" constant="20" id="VJ0-Xa-wbD"/>
+                            <constraint firstItem="m7X-os-D6V" firstAttribute="top" secondItem="wPu-lx-YNa" secondAttribute="top" constant="24" id="abw-wq-zaD"/>
+                            <constraint firstItem="CLZ-mA-0en" firstAttribute="top" secondItem="m7X-os-D6V" secondAttribute="bottom" constant="43" id="wy6-5y-D68"/>
+                            <constraint firstItem="m7X-os-D6V" firstAttribute="trailing" secondItem="J41-zE-UbF" secondAttribute="trailingMargin" id="wzG-Sh-PpA"/>
+                            <constraint firstItem="CLZ-mA-0en" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" id="z3M-Cu-h52"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wPu-lx-YNa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WJD-yt-MAV"/>
+                    <connections>
+                        <outlet property="tableView" destination="CLZ-mA-0en" id="vaM-77-N20"/>
+                        <segue destination="bIo-vU-4iY" kind="show" id="Bfc-yI-R9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HM-TV-D0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541.5999999999999" y="1635.832083958021"/>
+        </scene>
+        <!--Data Tab Detail View Controller-->
+        <scene sceneID="y8b-xv-pfK">
+            <objects>
+                <viewController id="bIo-vU-4iY" customClass="DataTabDetailViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dz-2b-QB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="C7w-bD-fLM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MGM-Uq-pKR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-tb-KA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="1636"/>
+        </scene>
+        <!--Data-->
+        <scene sceneID="taR-MI-ub8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iHr-7R-N9j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Data" image="chart.bar" catalog="system" id="vFb-gX-ZYB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wOz-49-a3w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qqr-dL-yrt" kind="relationship" relationship="rootViewController" id="qA1-Qy-bek"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ti1-yX-ztY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="1636"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackGround_SleepingMode" width="834.5" height="1112.5"/>
+        <image name="chart.bar" catalog="system" width="64" height="44"/>
+    </resources>
+</document>
