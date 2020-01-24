@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="height" constant="30" id="9tx-JU-uLd"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Day."/>
+                                    <segment title="Day"/>
                                     <segment title="Month"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

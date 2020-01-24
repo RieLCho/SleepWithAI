@@ -14,7 +14,10 @@ class DataTabDescViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var descLabel: UILabel!
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
+
     }
 }
