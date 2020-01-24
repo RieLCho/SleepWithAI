@@ -58,28 +58,12 @@
                     <navigationItem key="navigationItem" id="WJD-yt-MAV"/>
                     <connections>
                         <outlet property="tableView" destination="CLZ-mA-0en" id="vaM-77-N20"/>
-                        <segue destination="bIo-vU-4iY" kind="show" id="Bfc-yI-R9O"/>
+                        <segue destination="HuW-OU-DaK" kind="show" identifier="datatabsegue" id="ohB-W3-Rm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HM-TV-D0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="1635.832083958021"/>
-        </scene>
-        <!--Data Tab Detail View Controller-->
-        <scene sceneID="y8b-xv-pfK">
-            <objects>
-                <viewController id="bIo-vU-4iY" customClass="DataTabDetailViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3dz-2b-QB1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="C7w-bD-fLM"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="MGM-Uq-pKR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-tb-KA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2426" y="1636"/>
         </scene>
         <!--Data-->
         <scene sceneID="taR-MI-ub8">
@@ -99,6 +83,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ti1-yX-ztY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="1636"/>
+        </scene>
+        <!--Data Tab Desc View Controller-->
+        <scene sceneID="Ess-rb-ORk">
+            <objects>
+                <viewController id="HuW-OU-DaK" customClass="DataTabDescViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMA-88-dX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImZ-gu-YWU">
+                                <rect key="frame" x="16" y="101" width="344" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-K3-ZC9">
+                                <rect key="frame" x="16" y="171" width="343" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="ciE-Uu-JZG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-p4-mS6">
+                                <rect key="frame" x="16" y="433" width="343" height="210"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="bottom" secondItem="gn3-p4-mS6" secondAttribute="bottom" constant="24" id="CNW-47-86Z"/>
+                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="gn3-p4-mS6" secondAttribute="trailing" constant="16" id="M1Q-9e-q71"/>
+                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="leading" secondItem="gn3-p4-mS6" secondAttribute="leading" id="NSp-24-l4f"/>
+                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="trailing" secondItem="gn3-p4-mS6" secondAttribute="trailing" id="cMY-kp-aY3"/>
+                            <constraint firstItem="gn3-p4-mS6" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="16" id="duj-Lk-Oaj"/>
+                            <constraint firstItem="gn3-p4-mS6" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="er0-qp-Ldm"/>
+                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="top" secondItem="XMA-88-dX8" secondAttribute="top" constant="171" id="naf-wK-ys2"/>
+                            <constraint firstItem="ImZ-gu-YWU" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="rlU-MD-1h3"/>
+                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="22" id="wRs-B1-zjJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nHS-kL-2Uh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YKT-QN-K6f"/>
+                    <connections>
+                        <outlet property="descLabel" destination="gn3-p4-mS6" id="GaC-iC-pRW"/>
+                        <outlet property="myImageView" destination="3PJ-K3-ZC9" id="ON5-oY-oNO"/>
+                        <outlet property="titleLabel" destination="ImZ-gu-YWU" id="7d6-wM-R3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7j3-3X-xsV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373.5999999999999" y="1635.832083958021"/>
         </scene>
     </scenes>
     <resources>
