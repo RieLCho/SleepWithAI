@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - HGCircularSlider (2.2.0)
 
 DEPENDENCIES:
+  - Charts
   - HGCircularSlider
 
 SPEC REPOS:
   trunk:
+    - Charts
     - HGCircularSlider
 
 SPEC CHECKSUMS:
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
 
-PODFILE CHECKSUM: 939839a680f56721a8d0c2df43462257a68e137f
+PODFILE CHECKSUM: c084b74dd8a09f43142536e6c35f7b60ad634077
 
 COCOAPODS: 1.8.4
