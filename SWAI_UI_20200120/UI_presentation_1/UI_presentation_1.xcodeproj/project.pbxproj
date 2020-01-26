@@ -41,9 +41,13 @@
 		A6C4233A23CF0FEA0083F73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6EB14F123D6D68A00F02242 /* KindsOfSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindsOfSegues.swift; sourceTree = "<group>"; };
 		AAF09F5FA595A4AB309337F6 /* Pods-UI_presentation_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.release.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.release.xcconfig"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		B581E29F23DC979A00EB4E9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B581E2A123DC9ACA00EB4E9F /* SleepWithAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SleepWithAI.entitlements; sourceTree = "<group>"; };
 		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+=======
+		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../Downloads/SleepWithAI 4/SWAI_UI_20200120/UI_presentation_1/UI_presentation_1/ViewController.swift"; sourceTree = "<group>"; };
+>>>>>>> parent of 1ec3b97... reload to check success
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
 		E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCustomCell.swift; sourceTree = "<group>"; };

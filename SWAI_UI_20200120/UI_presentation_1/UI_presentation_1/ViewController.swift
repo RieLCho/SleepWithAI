@@ -9,17 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var segueIndex = 0
     var index: Int?
     var data =
         [
-        ["🙁 날씨?",       "⛳️ Golf",      "🏀 Basketball",    "🏈 American Football",
+        ["⚽️ Soccer",       "⛳️ Golf",      "🏀 Basketball",    "🏈 American Football",
          "⚾️ Baseball",     "🎾 Tennis",    "🏐 Valleyball",    "🏸 Badminton"],
         ["🍎 Apple",        "🍐 Pear",      "🍓 Strawberry",    "🥑 Avocado",
          "🍌 Banana",       "🍇 Grape",     "🍈 Melon",         "🍊 Orange",
          "🍑 Peach",         "🥝 Kiwi"]
     ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nibName = UINib(nibName: "CustomCell", bundle: nil)
@@ -29,8 +27,8 @@ class ViewController: UIViewController {
         self.index = sender.selectedSegmentIndex
         tableView.reloadData()
     }
-    
 }
+
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[self.index ?? 0].count
@@ -44,8 +42,4 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        segueIndex=indexPath.row
-        performSegue(withIdentifier: "datatabsegue", sender: self)
-    }
 }

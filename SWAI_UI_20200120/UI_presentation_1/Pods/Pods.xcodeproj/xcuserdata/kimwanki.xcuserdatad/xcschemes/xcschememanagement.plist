@@ -92,7 +92,11 @@
 		<key>HGCircularSlider.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>20</integer>
+=======
+			<integer>0</integer>
+>>>>>>> parent of 1ec3b97... reload to check success
 		</dict>
 		<key>Pods-UI_presentation_1.xcscheme_^#shared#^_</key>
 		<dict>
