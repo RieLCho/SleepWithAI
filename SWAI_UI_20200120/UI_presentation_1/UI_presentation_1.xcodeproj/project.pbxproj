@@ -19,7 +19,6 @@
 		E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1623DAB9D000537CFB /* ViewController.swift */; };
 		E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */; };
 		E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84D3D1A23DADB6300537CFB /* DataTab.storyboard */; };
-		E8A7270323CF82CB00E05C41 /* FirstCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */; };
 		E8DF0CAF23DAB48A00D6FF0B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */; };
 		E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */; };
 		FE406301BA65FD932B8B6349 /* Pods_UI_presentation_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */; };
@@ -43,7 +42,6 @@
 		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
-		E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCustomCell.swift; sourceTree = "<group>"; };
 		E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +89,6 @@
 				E84D3D1623DAB9D000537CFB /* ViewController.swift */,
 				A6C4232C23CF0FE90083F73C /* AppDelegate.swift */,
 				A6C4232E23CF0FE90083F73C /* SceneDelegate.swift */,
-				E8A7270223CF82CB00E05C41 /* FirstCustomCell.swift */,
 				A6A7046023D691450027504B /* MainViewController.swift */,
 				A6EB14F123D6D68A00F02242 /* KindsOfSegues.swift */,
 				A6C4233523CF0FEA0083F73C /* Assets.xcassets */,
@@ -248,7 +245,6 @@
 				A6C4232D23CF0FE90083F73C /* AppDelegate.swift in Sources */,
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
 				A6C4232F23CF0FE90083F73C /* SceneDelegate.swift in Sources */,
-				E8A7270323CF82CB00E05C41 /* FirstCustomCell.swift in Sources */,
 				A6EB14F223D6D68A00F02242 /* KindsOfSegues.swift in Sources */,
 				E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
