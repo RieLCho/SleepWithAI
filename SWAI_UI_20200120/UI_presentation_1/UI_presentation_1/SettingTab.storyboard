@@ -161,7 +161,7 @@
         <!--Set age range-->
         <scene sceneID="oxA-OP-g2z">
             <objects>
-                <viewController id="7bM-Hc-AaE" sceneMemberID="viewController">
+                <viewController id="7bM-Hc-AaE" customClass="AgeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2qT-pR-dkb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,6 +173,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write Age Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-tY-eTB">
+                                <rect key="frame" x="120" y="256" width="134" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="ageValue:" destination="A4S-PJ-g2C" eventType="editingDidEnd" id="rUy-PQ-4ri"/>
+                                    <action selector="ageValueInput:" destination="A4S-PJ-g2C" eventType="valueChanged" id="8XU-hI-3QM"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We use this personal information only for 'I don't care' mode." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inm-6M-UGB">
                                 <rect key="frame" x="16" y="359" width="343" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -187,20 +197,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-tY-eTB">
-                                <rect key="frame" x="139" y="262" width="97" height="34"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-Ne-523">
+                                <rect key="frame" x="0.0" y="534" width="375" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" systemColor="quaternaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mYm-IZ-8uT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="KXt-Xu-xWJ"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4KT-Uo-Ls6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set age range" id="zWt-Hk-uB6"/>
+                    <connections>
+                        <outlet property="AgeInputTextField" destination="EOJ-tY-eTB" id="iSf-bU-h7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cv-6R-9tb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A4S-PJ-g2C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="421.60000000000002" y="1630.4347826086957"/>
         </scene>
@@ -411,7 +424,7 @@
         <!--Every Monday-->
         <scene sceneID="IAJ-7N-hXw">
             <objects>
-                <viewController id="ifK-rm-vmC" sceneMemberID="viewController">
+                <viewController id="ifK-rm-vmC" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfV-tv-gcs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,6 +446,9 @@
                         <viewLayoutGuide key="safeArea" id="AJs-lb-5cd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Monday" id="3eC-c4-UbA"/>
+                    <connections>
+                        <outlet property="EveryMonday" destination="1nB-Qk-Yut" id="evc-Qr-uoI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4T-nC-1Ax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,7 +476,7 @@
         <!--Every Tuesday-->
         <scene sceneID="bGO-nL-Gqv">
             <objects>
-                <viewController id="fT0-bJ-B63" sceneMemberID="viewController">
+                <viewController id="fT0-bJ-B63" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gO8-y1-nnO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,6 +498,9 @@
                         <viewLayoutGuide key="safeArea" id="KOc-x4-Lwo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Tuesday" id="SG8-ZB-WN4"/>
+                    <connections>
+                        <outlet property="EveryTuesday" destination="CrH-ew-Qwi" id="TM0-FN-4CZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuy-lF-2Ml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,7 +509,7 @@
         <!--Every Wednesday-->
         <scene sceneID="dOO-tA-4j2">
             <objects>
-                <viewController id="sCT-yM-nHX" sceneMemberID="viewController">
+                <viewController id="sCT-yM-nHX" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SrS-h6-ipz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -512,6 +531,9 @@
                         <viewLayoutGuide key="safeArea" id="BXM-J8-vWu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Wednesday" id="UiN-C1-PLL"/>
+                    <connections>
+                        <outlet property="EveryWednesday" destination="22E-Ao-3tK" id="gKT-gv-FaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOf-Lo-cti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -520,7 +542,7 @@
         <!--Every Thursday-->
         <scene sceneID="TBT-zu-BEc">
             <objects>
-                <viewController id="XmM-Rq-DUW" sceneMemberID="viewController">
+                <viewController id="XmM-Rq-DUW" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qgs-Ft-3Gg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,6 +564,9 @@
                         <viewLayoutGuide key="safeArea" id="JQe-sE-GTv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Thursday" id="TIO-Ub-I9f"/>
+                    <connections>
+                        <outlet property="EveryThursday" destination="QDt-9s-xz8" id="YcZ-RV-hy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdE-60-clc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -550,7 +575,7 @@
         <!--Every Friday-->
         <scene sceneID="LGq-Wr-le4">
             <objects>
-                <viewController id="lvo-wQ-2Ie" sceneMemberID="viewController">
+                <viewController id="lvo-wQ-2Ie" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccV-2f-GJf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -572,6 +597,9 @@
                         <viewLayoutGuide key="safeArea" id="66s-Sx-LJD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Friday" id="qB0-Zz-AMb"/>
+                    <connections>
+                        <outlet property="EveryFriday" destination="Mxl-11-j7v" id="sen-c4-FOs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MI1-IA-MBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -580,7 +608,7 @@
         <!--Every Saturday-->
         <scene sceneID="GSd-E4-4FZ">
             <objects>
-                <viewController id="sr8-Py-Npu" sceneMemberID="viewController">
+                <viewController id="sr8-Py-Npu" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6T-FR-cCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,6 +630,9 @@
                         <viewLayoutGuide key="safeArea" id="aaQ-rk-Mk5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Saturday" id="Q3w-t1-wiO"/>
+                    <connections>
+                        <outlet property="EverySaturday" destination="wg8-m9-r9j" id="IeK-hV-ME5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwk-yv-ym3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -610,7 +641,7 @@
         <!--Every Sunday-->
         <scene sceneID="Zu1-j5-Ggs">
             <objects>
-                <viewController id="LdW-ca-hfm" sceneMemberID="viewController">
+                <viewController id="LdW-ca-hfm" customClass="AlarmTimeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pGz-zC-Qc4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,6 +663,9 @@
                         <viewLayoutGuide key="safeArea" id="5hD-iH-gSk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Every Sunday" id="C6d-M9-gjR"/>
+                    <connections>
+                        <outlet property="EverySunday" destination="9Eh-tC-9b7" id="oq4-o0-8gf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6K-2l-Da3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
