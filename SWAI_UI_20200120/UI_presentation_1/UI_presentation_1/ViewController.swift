@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     var segueIndex = 0
     var index: Int?
