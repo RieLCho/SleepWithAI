@@ -216,7 +216,7 @@
         <!--취침모드-->
         <scene sceneID="y6p-6D-LEC">
             <objects>
-                <viewController title="취침모드" id="0dz-L7-7vV" sceneMemberID="viewController">
+                <viewController title="취침모드" id="0dz-L7-7vV" customClass="MainModalViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EoV-tF-aWY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,6 +22,8 @@
 		E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1623DAB9D000537CFB /* ViewController.swift */; };
 		E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */; };
 		E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84D3D1A23DADB6300537CFB /* DataTab.storyboard */; };
+		E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A902423E0912F00E42621 /* MainModalViewController.swift */; };
+		E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */; };
 		E8DF0CAF23DAB48A00D6FF0B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */; };
 		E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */; };
 		FE406301BA65FD932B8B6349 /* Pods_UI_presentation_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */; };
@@ -48,6 +50,8 @@
 		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
+		E87A902423E0912F00E42621 /* MainModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalViewController.swift; sourceTree = "<group>"; };
+		E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepSoundClassification.mlmodel; sourceTree = "<group>"; };
 		E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,7 @@
 		A6C4232B23CF0FE90083F73C /* UI_presentation_1 */ = {
 			isa = PBXGroup;
 			children = (
+				E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */,
 				A60238E723DDC54A00A9B854 /* API */,
 				E8DF0CAC23DAB48A00D6FF0B /* Cells */,
 				A6C4233223CF0FE90083F73C /* Main.storyboard */,
@@ -111,6 +116,7 @@
 				A6C4233A23CF0FEA0083F73C /* Info.plist */,
 				B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */,
 				B5E858FD23DF3E23003C5818 /* AlarmTimeViewController.swift */,
+				E87A902423E0912F00E42621 /* MainModalViewController.swift */,
 			);
 			path = UI_presentation_1;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C4232D23CF0FE90083F73C /* AppDelegate.swift in Sources */,
+				E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */,
 				A60238E923DDC58E00A9B854 /* DayData.swift in Sources */,
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
 				B5E858FE23DF3E23003C5818 /* AlarmTimeViewController.swift in Sources */,
@@ -268,6 +275,7 @@
 				E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */,
 				B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
+				E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */,
 				A60238EB23DDDAA200A9B854 /* Api.swift in Sources */,
 				A6A7046123D691450027504B /* MainViewController.swift in Sources */,
 			);
@@ -415,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6U5233X9SB;
 				INFOPLIST_FILE = UI_presentation_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
