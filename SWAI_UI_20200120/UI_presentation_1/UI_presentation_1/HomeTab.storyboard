@@ -221,8 +221,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-4x-Xeh">
-                                <rect key="frame" x="-60" y="-226" width="835" height="1113"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-4x-Xeh">
+                                <rect key="frame" x="-60" y="-38" width="1074" height="1283"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-lW-BhT">
                                 <rect key="frame" x="31" y="53" width="313" height="74"/>
@@ -273,12 +273,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zPr-4x-Xeh" firstAttribute="top" secondItem="EoV-tF-aWY" secondAttribute="top" constant="-226" id="Aes-df-XKc"/>
-                            <constraint firstAttribute="bottom" secondItem="zPr-4x-Xeh" secondAttribute="bottom" constant="-240" id="FBe-pT-qQm"/>
+                            <constraint firstItem="zPr-4x-Xeh" firstAttribute="leading" secondItem="EoV-tF-aWY" secondAttribute="leading" constant="-60" id="8Jt-Gm-yed"/>
+                            <constraint firstAttribute="bottom" secondItem="zPr-4x-Xeh" secondAttribute="bottom" constant="-598" id="At0-Qe-a7d"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" id="THd-AD-tfJ"/>
-                            <constraint firstItem="zPr-4x-Xeh" firstAttribute="leading" secondItem="EoV-tF-aWY" secondAttribute="leading" constant="-60" id="YQO-3d-bGe"/>
+                            <constraint firstItem="zPr-4x-Xeh" firstAttribute="top" secondItem="EoV-tF-aWY" secondAttribute="top" constant="-38" id="WfN-S0-8OY"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="top" secondItem="yIo-oY-kSp" secondAttribute="top" constant="53" id="i17-yB-Csw"/>
-                            <constraint firstAttribute="trailing" secondItem="zPr-4x-Xeh" secondAttribute="trailing" constant="-400" id="zS0-AL-oSs"/>
+                            <constraint firstAttribute="trailing" secondItem="zPr-4x-Xeh" secondAttribute="trailing" constant="-639" id="zpt-p8-8bX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yIo-oY-kSp"/>
                     </view>
@@ -309,7 +309,7 @@
     </scenes>
     <resources>
         <image name="BackGround" width="834" height="1112"/>
-        <image name="BackGround_SleepingMode" width="834.5" height="1112.5"/>
+        <image name="BackGround_SleepingMode" width="830" height="925"/>
         <image name="charging" width="256" height="256"/>
         <image name="day-2" width="512" height="512"/>
         <image name="house" catalog="system" width="64" height="54"/>
