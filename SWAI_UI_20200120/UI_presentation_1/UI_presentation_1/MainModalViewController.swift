@@ -10,12 +10,20 @@ import UIKit
 import AVKit
 import SoundAnalysis
 
-
 class MainModalViewController: UIViewController {
     
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
     
+    struct SleepSoundUnit {
+        var identifier: String
+        var confidence: Double
+        var startedSecond: Double
+        var endedSecond: Double
+    }
+    var recoded:[SleepSoundUnit] = []
+    var currentLabel = ""
+    var currentStarted:Double = -1
     var inputFormat: AVAudioFormat!
     var analyzer: SNAudioStreamAnalyzer!
     var resultsObserver = ResultsObserver()
@@ -42,7 +50,6 @@ class MainModalViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         resultsObserver.delegate = self
         inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
@@ -52,6 +59,11 @@ class MainModalViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         startAudioEngine()
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        audioEngine.stop()
     }
     func buildUI()
     {
@@ -75,6 +87,7 @@ class MainModalViewController: UIViewController {
             ]
         )
     }
+    
     private func startAudioEngine() {
         do {
             let request = try SNClassifySoundRequest(mlModel: soundClassifier.model)
@@ -85,6 +98,7 @@ class MainModalViewController: UIViewController {
         }
         
         audioEngine.inputNode.installTap(onBus: 0, bufferSize: 8000, format: inputFormat) { buffer, time in
+            
             self.analysisQueue.async {
                 self.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
             }
@@ -99,17 +113,30 @@ class MainModalViewController: UIViewController {
     
 }
 protocol SoundClassifierDelegate {
-    func displayPredictionResult(identifier: String, confidence: Double)
+    func displayPredictionResult(identifier: String, confidence: Double, seconds:Double)
 }
 
 extension MainModalViewController: SoundClassifierDelegate {
-    func displayPredictionResult(identifier: String, confidence: Double) {
-        DispatchQueue.main.async {
-            self.transcribedText.text = ("Recognition: \(identifier)\nConfidence \(confidence)")
+    func displayPredictionResult(identifier: String, confidence: Double, seconds: Double) {
+        if self.currentLabel == identifier {
+            print("same")
+        } else {
+            if self.recoded.count == 0 && self.currentStarted == -1 {
+                self.currentStarted = seconds
+                self.currentLabel = identifier
+            } else {
+                self.recoded.append(SleepSoundUnit(identifier: self.currentLabel, confidence: confidence, startedSecond: self.currentStarted, endedSecond: seconds))
+                self.currentLabel = identifier
+                self.currentStarted = seconds
+            }
+            //print(self.recoded.count)
+            print(self.recoded)
+            DispatchQueue.main.async {
+                self.transcribedText.text = ("Recognition: \(identifier)")
+            }
         }
     }
 }
-
 
 class ResultsObserver: NSObject, SNResultsObserving {
     var delegate: SoundClassifierDelegate?
@@ -120,7 +147,7 @@ class ResultsObserver: NSObject, SNResultsObserving {
         let confidence = classification.confidence * 100.0
         
         if confidence > 60 {
-            delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence)
+            delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence, seconds: result.timeRange.end.seconds)
         }
     }
 }
