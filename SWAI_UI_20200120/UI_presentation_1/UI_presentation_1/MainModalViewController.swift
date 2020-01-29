@@ -21,6 +21,7 @@ class MainModalViewController: UIViewController {
         var startedSecond: Double
         var endedSecond: Double
     }
+    
     var recoded:[SleepSoundUnit] = []
     var currentLabel = ""
     var currentStarted:Double = -1
@@ -48,6 +49,7 @@ class MainModalViewController: UIViewController {
         view.font = UIFont.systemFont(ofSize: 25)
         return view
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -57,14 +59,15 @@ class MainModalViewController: UIViewController {
         
         buildUI()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         startAudioEngine()
     }
     
-    
     override func viewDidDisappear(_ animated: Bool) {
         audioEngine.stop()
     }
+    
     func buildUI()
     {
         self.view.addSubview(placeholderText)
