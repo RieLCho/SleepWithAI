@@ -26,16 +26,6 @@
             </objects>
             <point key="canvasLocation" x="899" y="96"/>
         </scene>
-        <!--SettingTab-->
-        <scene sceneID="zra-ul-gU2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SettingTab" id="5vm-1L-dJo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YPW-cE-rfr"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kAX-bA-1A4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="907" y="-29"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aYK-xA-UbC">
             <objects>
@@ -49,7 +39,6 @@
                     <connections>
                         <segue destination="liH-hw-N8V" kind="relationship" relationship="viewControllers" id="9UB-Nj-Bpg"/>
                         <segue destination="8AC-w7-Uck" kind="relationship" relationship="viewControllers" id="6v4-c3-kmU"/>
-                        <segue destination="5vm-1L-dJo" kind="relationship" relationship="viewControllers" id="4Lj-Md-2Wj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbl-L4-7nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

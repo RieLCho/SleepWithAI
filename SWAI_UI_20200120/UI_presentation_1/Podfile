@@ -4,7 +4,6 @@
 target 'UI_presentation_1' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'HGCircularSlider'
 
   # Pods for UI_presentation_1
   pod 'Charts'
