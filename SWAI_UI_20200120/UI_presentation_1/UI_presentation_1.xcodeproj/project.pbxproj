@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A60238E923DDC58E00A9B854 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60238E823DDC58E00A9B854 /* DayData.swift */; };
-		A60238EB23DDDAA200A9B854 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60238EA23DDDAA200A9B854 /* Api.swift */; };
 		A636D3BA23D5B1860040FC04 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A636D3B923D5B1860040FC04 /* SettingTab.storyboard */; };
 		A636D3BC23D5B2740040FC04 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A636D3BB23D5B2740040FC04 /* HomeTab.storyboard */; };
 		A6A7046123D691450027504B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7046023D691450027504B /* MainViewController.swift */; };
@@ -32,7 +31,6 @@
 		282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_presentation_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8C21AF1F0AD78EEF1EF339 /* Pods-UI_presentation_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.debug.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.debug.xcconfig"; sourceTree = "<group>"; };
 		A60238E823DDC58E00A9B854 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
-		A60238EA23DDDAA200A9B854 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		A636D3B923D5B1860040FC04 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
 		A636D3BB23D5B2740040FC04 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		A6A7046023D691450027504B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				A60238E823DDC58E00A9B854 /* DayData.swift */,
-				A60238EA23DDDAA200A9B854 /* Api.swift */,
 			);
 			name = API;
 			path = ..;
@@ -272,7 +269,6 @@
 				B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
 				E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */,
-				A60238EB23DDDAA200A9B854 /* Api.swift in Sources */,
 				A6A7046123D691450027504B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
