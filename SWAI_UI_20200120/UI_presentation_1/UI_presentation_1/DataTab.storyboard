@@ -138,7 +138,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackGround_SleepingMode" width="834.5" height="1112.5"/>
+        <image name="BackGround_SleepingMode" width="830" height="925"/>
         <image name="chart.bar" catalog="system" width="64" height="44"/>
     </resources>
 </document>

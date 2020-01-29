@@ -91,28 +91,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your age?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-Bg-Upn">
-                                <rect key="frame" x="61" y="157" width="253" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your age?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-Bg-Upn">
+                                <rect key="frame" x="29.5" y="157" width="316.5" height="43"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
+                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write Age Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o35-LS-gNb">
-                                <rect key="frame" x="120" y="248" width="134" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write Age Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o35-LS-gNb">
+                                <rect key="frame" x="115.5" y="246.5" width="144" height="34"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We use this personal information only for 'I don't care' mode." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG3-Z2-jqd">
-                                <rect key="frame" x="16" y="323" width="343" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We use this personal information only for 'I don't care' mode." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG3-Z2-jqd">
+                                <rect key="frame" x="16" y="323" width="343" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="dSL-CF-ZYP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-iO-vnb">
+                                <rect key="frame" x="-287" y="-96" width="830" height="925"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="o35-LS-gNb" firstAttribute="centerY" secondItem="Sls-ut-r0x" secondAttribute="centerY" constant="-70" id="FV7-F0-qey"/>
+                            <constraint firstItem="XGT-yb-pzE" firstAttribute="trailing" secondItem="WG3-Z2-jqd" secondAttribute="trailing" constant="16" id="GdQ-d9-uxE"/>
+                            <constraint firstItem="dPc-iO-vnb" firstAttribute="top" secondItem="Sls-ut-r0x" secondAttribute="top" constant="-96" id="OkC-aP-hSW"/>
+                            <constraint firstAttribute="trailing" secondItem="dPc-iO-vnb" secondAttribute="trailing" constant="-168" id="OoK-el-lIl"/>
+                            <constraint firstItem="dPc-iO-vnb" firstAttribute="leading" secondItem="Sls-ut-r0x" secondAttribute="leading" constant="-287" id="VIb-SL-yfS"/>
+                            <constraint firstAttribute="bottom" secondItem="dPc-iO-vnb" secondAttribute="bottom" constant="-162" id="ZN3-J9-MuD"/>
+                            <constraint firstItem="o35-LS-gNb" firstAttribute="top" secondItem="kLW-Bg-Upn" secondAttribute="bottom" constant="46.5" id="brX-y8-T1x"/>
+                            <constraint firstItem="o35-LS-gNb" firstAttribute="centerX" secondItem="Sls-ut-r0x" secondAttribute="centerX" id="eAv-Ui-Kdd"/>
+                            <constraint firstItem="WG3-Z2-jqd" firstAttribute="top" secondItem="o35-LS-gNb" secondAttribute="bottom" constant="42.5" id="hCP-Y9-vxG"/>
+                            <constraint firstItem="WG3-Z2-jqd" firstAttribute="centerX" secondItem="Sls-ut-r0x" secondAttribute="centerX" id="uLt-Jy-gNr"/>
+                            <constraint firstItem="kLW-Bg-Upn" firstAttribute="centerX" secondItem="Sls-ut-r0x" secondAttribute="centerX" id="vaO-Ti-5BN"/>
+                            <constraint firstItem="WG3-Z2-jqd" firstAttribute="leading" secondItem="XGT-yb-pzE" secondAttribute="leading" constant="16" id="yMZ-JW-lTy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XGT-yb-pzE"/>
                     </view>
                     <navigationItem key="navigationItem" id="wcq-HI-rQN">
@@ -121,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6U-EP-SJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="896"/>
+            <point key="canvasLocation" x="69.599999999999994" y="895.50224887556226"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ui1-Gd-7hl">
@@ -129,8 +146,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="plU-8i-kPX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="HUp-74-sNv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qY7-Fi-7FK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qY7-Fi-7FK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -144,6 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackGround_SleepingMode" width="830" height="925"/>
         <image name="gear" catalog="system" width="64" height="58"/>
     </resources>
 </document>

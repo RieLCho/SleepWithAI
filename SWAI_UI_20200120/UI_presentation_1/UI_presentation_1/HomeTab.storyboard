@@ -234,50 +234,76 @@
                                 <color key="textColor" red="0.63209909200000003" green="0.59983515740000004" blue="0.60362893340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. Put your cell phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50m-aq-WUi">
-                                <rect key="frame" x="15" y="282" width="394" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="1. keep your phone charged" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-0C-A5O">
-                                <rect key="frame" x="15" y="180" width="355" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="while you're sleeping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-2E-AwR">
-                                <rect key="frame" x="48" y="231" width="249" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="at your bedside." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-JE-OSk">
-                                <rect key="frame" x="48" y="319" width="196" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="day-2" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-Pn-EeX">
-                                <rect key="frame" x="29" y="430" width="161" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="charging" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-Z5-TAo">
+                                <rect key="frame" x="186.5" y="432.5" width="162" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Jcd-Da-Gu7"/>
+                                    <constraint firstAttribute="width" constant="162" id="gtr-1G-7Yu"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="charging" translatesAutoresizingMaskIntoConstraints="NO" id="tBf-Z5-TAo">
-                                <rect key="frame" x="190" y="421" width="152" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kxk-qT-3xJ">
+                                <rect key="frame" x="20" y="194" width="335" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1. keep your phone charged" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-0C-A5O">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="27"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="while you're sleeping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-2E-AwR">
+                                        <rect key="frame" x="20" y="32" width="295" height="27"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fFm-2E-AwR" firstAttribute="leading" secondItem="kxk-qT-3xJ" secondAttribute="leading" constant="20" id="3IW-pX-LeS"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-Dt-yO5">
+                                <rect key="frame" x="20" y="273" width="269" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Put your cell phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50m-aq-WUi">
+                                        <rect key="frame" x="0.0" y="0.0" width="269" height="27"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at your bedside." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-JE-OSk">
+                                        <rect key="frame" x="20" y="35" width="229" height="27"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DSN-JE-OSk" firstAttribute="leading" secondItem="hnw-Dt-yO5" secondAttribute="leading" constant="20" id="rv0-lX-r91"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="day-2" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-Pn-EeX">
+                                <rect key="frame" x="26.5" y="432.5" width="162" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="COh-bY-n1b"/>
+                                    <constraint firstAttribute="height" constant="162" id="sga-xh-FKp"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hnw-Dt-yO5" firstAttribute="top" secondItem="kxk-qT-3xJ" secondAttribute="bottom" constant="20" id="0cW-yI-kta"/>
+                            <constraint firstItem="EZ9-Pn-EeX" firstAttribute="centerY" secondItem="EoV-tF-aWY" secondAttribute="centerY" constant="190" id="0vy-Qm-Opv"/>
                             <constraint firstItem="zPr-4x-Xeh" firstAttribute="leading" secondItem="EoV-tF-aWY" secondAttribute="leading" constant="-60" id="8Jt-Gm-yed"/>
+                            <constraint firstItem="tBf-Z5-TAo" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" constant="80" id="91v-2G-ga1"/>
                             <constraint firstAttribute="bottom" secondItem="zPr-4x-Xeh" secondAttribute="bottom" constant="-598" id="At0-Qe-a7d"/>
+                            <constraint firstItem="tBf-Z5-TAo" firstAttribute="centerY" secondItem="EoV-tF-aWY" secondAttribute="centerY" constant="190" id="L7L-Aw-f6U"/>
+                            <constraint firstItem="kxk-qT-3xJ" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" id="OCl-GD-8dm"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" id="THd-AD-tfJ"/>
                             <constraint firstItem="zPr-4x-Xeh" firstAttribute="top" secondItem="EoV-tF-aWY" secondAttribute="top" constant="-38" id="WfN-S0-8OY"/>
+                            <constraint firstItem="kxk-qT-3xJ" firstAttribute="centerY" secondItem="EoV-tF-aWY" secondAttribute="centerY" constant="-100" id="gSX-HK-98O"/>
+                            <constraint firstItem="EZ9-Pn-EeX" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" constant="-80" id="h58-27-dgb"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="top" secondItem="yIo-oY-kSp" secondAttribute="top" constant="53" id="i17-yB-Csw"/>
+                            <constraint firstItem="hnw-Dt-yO5" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" constant="-33" id="sYA-vG-iaj"/>
                             <constraint firstAttribute="trailing" secondItem="zPr-4x-Xeh" secondAttribute="trailing" constant="-639" id="zpt-p8-8bX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yIo-oY-kSp"/>
