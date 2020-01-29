@@ -7,11 +7,11 @@
 //
 import UIKit
 import Foundation
-
-
+//
+//
 class AgeViewController: UIViewController {
-    
-    @IBOutlet weak var AgeInputTextField: UITextField!
-    
-    
+//    
+//    @IBOutlet weak var AgeInputTextField: UITextField!
+//    
+//    
 }
