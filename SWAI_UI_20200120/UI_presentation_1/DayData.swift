@@ -14,6 +14,22 @@ struct SleepSoundUnit {
     var endedSecond: Double
 }
 
+struct DayData {
+    var day: String
+    var sleepData: [SleepSoundUnit]
+}
+
+let dayData: [DayData] = [
+    DayData(day: "2020-01-22", sleepData: recorded),
+    DayData(day: "2020-01-23", sleepData: recorded),
+    DayData(day: "2020-01-24", sleepData: recorded),
+    DayData(day: "2020-01-25", sleepData: recorded),
+    DayData(day: "2020-01-26", sleepData: recorded),
+    DayData(day: "2020-01-27", sleepData: recorded),
+    DayData(day: "2020-01-28", sleepData: recorded),
+    DayData(day: "2020-01-29", sleepData: recorded)
+]
+
 let recorded:[SleepSoundUnit] = [
     SleepSoundUnit(identifier: "sleeptalking", startedSecond: 1.5425396825396824, endedSecond: 8.855034013605442),
     SleepSoundUnit(identifier: "snoring", startedSecond: 8.855034013605442, endedSecond: 9.342539682539682),

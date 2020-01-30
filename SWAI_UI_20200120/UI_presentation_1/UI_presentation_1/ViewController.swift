@@ -27,19 +27,26 @@ class ViewController: UIViewController {
         tableView.register(nibName, forCellReuseIdentifier: "customCell")
     }
     @IBAction func switchSegmentedCtrlViewAction(_ sender: UISegmentedControl) {
-        self.index = sender.selectedSegmentIndex
-        tableView.reloadData()
+        //self.index = sender.selectedSegmentIndex
+        //tableView.reloadData()
     }
     
 }
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[self.index ?? 0].count
+        //return data[self.index ?? 0].count
+        return dayData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomCell
-        let str = data[self.index ?? 0][indexPath.row].components(separatedBy: " ")
-        cell.custominit(text: str[1], accessoryText: str[0])
+        
+        //let str = data[self.index ?? 0][indexPath.row].components(separatedBy: " ")
+        //cell.custominit(text: str[1], accessoryText: str[0])
+        
+        cell.titleLabel.text = dayData[indexPath.row].day
+        
+        cell.buildUI(data: dayData[indexPath.row].sleepData)
+        
         return cell
     }
 }
@@ -49,4 +56,9 @@ extension ViewController: UITableViewDelegate {
         segueIndex=indexPath.row
         performSegue(withIdentifier: "datatabsegue", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+
 }
