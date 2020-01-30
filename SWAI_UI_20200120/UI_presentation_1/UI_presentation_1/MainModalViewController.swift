@@ -9,8 +9,10 @@
 import UIKit
 import AVKit
 import SoundAnalysis
+import RealmSwift
 
 class MainModalViewController: UIViewController {
+    
     
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
@@ -53,6 +55,9 @@ class MainModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        let realm = try! Realm()
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
+//        var DB = SleepSoundUnitDB()
         resultsObserver.delegate = self
         inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
         analyzer = SNAudioStreamAnalyzer(format: inputFormat)
@@ -66,6 +71,26 @@ class MainModalViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         audioEngine.stop()
+        
+        do {
+            let realm = try Realm()
+             print(Realm.Configuration.defaultConfiguration.fileURL)
+            try realm.write {
+                let dataToAdd:[SleepSoundUnitDB] = self.recoded.map {
+//                    let obj = SleepSoundUnitDB()
+//                    obj.confidence = $0.confidence
+//                    obj.identifier = $0.identifier
+//                    obj.startedSecond = $0.startedSecond
+//                    obj.endedSecond = $0.endedSecond
+//                    return obj
+                    return SleepSoundUnitDB(identifier: $0.identifier, confidence: $0.confidence, startedSecond: $0.startedSecond, endedSecond: $0.endedSecond)
+                }
+                realm.add(dataToAdd)   
+                
+            }
+        } catch {
+            print(error)
+        }
     }
     
     func buildUI()

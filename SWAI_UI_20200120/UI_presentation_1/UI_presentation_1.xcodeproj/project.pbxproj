@@ -22,6 +22,7 @@
 		E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84D3D1A23DADB6300537CFB /* DataTab.storyboard */; };
 		E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A902423E0912F00E42621 /* MainModalViewController.swift */; };
 		E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */; };
+		E87A903023E2B8CF00E42621 /* SleepSoundUnitDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */; };
 		E8DF0CAF23DAB48A00D6FF0B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */; };
 		E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */; };
 		FE406301BA65FD932B8B6349 /* Pods_UI_presentation_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */; };
@@ -48,6 +49,7 @@
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
 		E87A902423E0912F00E42621 /* MainModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalViewController.swift; sourceTree = "<group>"; };
 		E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepSoundClassification.mlmodel; sourceTree = "<group>"; };
+		E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSoundUnitDB.swift; sourceTree = "<group>"; };
 		E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				A6C4233A23CF0FEA0083F73C /* Info.plist */,
 				B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */,
 				E87A902423E0912F00E42621 /* MainModalViewController.swift */,
+				E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */,
 			);
 			path = UI_presentation_1;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C4232D23CF0FE90083F73C /* AppDelegate.swift in Sources */,
+				E87A903023E2B8CF00E42621 /* SleepSoundUnitDB.swift in Sources */,
 				E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */,
 				A60238E923DDC58E00A9B854 /* DayData.swift in Sources */,
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
