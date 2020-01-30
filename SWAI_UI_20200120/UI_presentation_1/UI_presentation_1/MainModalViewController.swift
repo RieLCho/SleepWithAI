@@ -22,6 +22,7 @@ class MainModalViewController: UIViewController {
         var confidence: Double
         var startedSecond: Double
         var endedSecond: Double
+        var date: String
     }
     
     var recoded:[SleepSoundUnit] = []
@@ -61,7 +62,6 @@ class MainModalViewController: UIViewController {
         resultsObserver.delegate = self
         inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
         analyzer = SNAudioStreamAnalyzer(format: inputFormat)
-        
         buildUI()
     }
     
@@ -83,9 +83,9 @@ class MainModalViewController: UIViewController {
 //                    obj.startedSecond = $0.startedSecond
 //                    obj.endedSecond = $0.endedSecond
 //                    return obj
-                    return SleepSoundUnitDB(identifier: $0.identifier, confidence: $0.confidence, startedSecond: $0.startedSecond, endedSecond: $0.endedSecond)
+                    return SleepSoundUnitDB(identifier: $0.identifier, confidence: $0.confidence, startedSecond: $0.startedSecond, endedSecond: $0.endedSecond, date:  $0.date)
                 }
-                realm.add(dataToAdd)   
+                realm.add(dataToAdd)
                 
             }
         } catch {
@@ -138,14 +138,13 @@ class MainModalViewController: UIViewController {
             print("error in starting the Audio Engin")
         }
     }
-    
-}
-protocol SoundClassifierDelegate {
-    func displayPredictionResult(identifier: String, confidence: Double, seconds:Double)
 }
 
+protocol SoundClassifierDelegate {
+    func displayPredictionResult(identifier: String, confidence: Double, seconds:Double, date: String)
+}
 extension MainModalViewController: SoundClassifierDelegate {
-    func displayPredictionResult(identifier: String, confidence: Double, seconds: Double) {
+    func displayPredictionResult(identifier: String, confidence: Double, seconds: Double, date: String) {
         if self.currentLabel == identifier {
             print("same")
         } else {
@@ -153,7 +152,7 @@ extension MainModalViewController: SoundClassifierDelegate {
                 self.currentStarted = seconds
                 self.currentLabel = identifier
             } else {
-                self.recoded.append(SleepSoundUnit(identifier: self.currentLabel, confidence: confidence, startedSecond: self.currentStarted, endedSecond: seconds))
+                self.recoded.append(SleepSoundUnit(identifier: self.currentLabel, confidence: confidence, startedSecond: self.currentStarted, endedSecond: seconds, date: date))
                 self.currentLabel = identifier
                 self.currentStarted = seconds
             }
@@ -171,11 +170,14 @@ class ResultsObserver: NSObject, SNResultsObserving {
     func request(_ request: SNRequest, didProduce result: SNResult) {
         guard let result = result as? SNClassificationResult,
             let classification = result.classifications.first else { return }
-        
         let confidence = classification.confidence * 100.0
-        
+        let allDate = Date() // --- 1
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" // --- 2
+        let date = dateFormatter.string(from: allDate) // --- 3
         if confidence > 60 {
-            delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence, seconds: result.timeRange.end.seconds)
+            delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence, seconds: result.timeRange.end.seconds, date: date)
         }
+        
     }
 }
