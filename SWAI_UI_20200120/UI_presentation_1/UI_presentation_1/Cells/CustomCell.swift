@@ -64,6 +64,9 @@ class CustomCell: UITableViewCell {
             }
         }
         creatingData(widthOfData: 0.1, dataViewColor: .black)
+        //끝 구별하려고 검은색 넣음
+        
+        startingX = 16
         
     }
 
