@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="iJ9-HM-8QF">
-                                <rect key="frame" x="-23" y="-11" width="504" height="730"/>
+                                <rect key="frame" x="-23" y="-11" width="504.00000000000023" height="730"/>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-RE-Cda">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-RE-Cda">
                                 <rect key="frame" x="27.5" y="244.5" width="320" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="4f4-ub-TzE"/>
@@ -36,6 +36,7 @@
                                     <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="HomeSleepNowButtonClicked:" destination="n3X-61-x8i" eventType="touchUpInside" id="OVY-2S-hAi"/>
                                     <segue destination="0dz-L7-7vV" kind="presentation" id="JMB-Id-4nY"/>
                                 </connections>
                             </button>
@@ -63,8 +64,8 @@
                                     <segue destination="c6q-uo-Vbg" kind="show" id="AAw-e9-Gb8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to Wake Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCc-XX-Grn">
-                                <rect key="frame" x="27.5" y="180.5" width="320" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time to Wake Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCc-XX-Grn">
+                                <rect key="frame" x="27" y="172" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="0zo-CJ-e9y"/>
                                     <constraint firstAttribute="height" constant="44" id="8VX-dB-qeA"/>
@@ -73,6 +74,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ql-Hh-KG2">
+                                <rect key="frame" x="16" y="224" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -98,6 +105,10 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
+                    <connections>
+                        <outlet property="HomeDatePicker" destination="NyR-RE-Cda" id="lkZ-EF-xOb"/>
+                        <outlet property="HomeTextField" destination="7ql-Hh-KG2" id="Yio-nC-pm2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ET6-uM-oV5" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="ouy-l2-YtH">
-                                <rect key="frame" x="-21" y="-19" width="519" height="749"/>
+                                <rect key="frame" x="-21" y="-19" width="519.00000000000023" height="749"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*careful*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Ky-ncm">
                                 <rect key="frame" x="12.5" y="154.5" width="350" height="27"/>
