@@ -11,8 +11,50 @@ import UserNotifications
 
 class MainViewController: UIViewController {
 
+    var appDelegate = UIApplication.shared.delegate as? AppDelegate
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
     }
+    
+    @IBAction func HomeSleepNowButtonClicked(_ sender: Any) {
+        let allowedTimeError:Int = 60 * 30 //30분을 오차수용범위라 세팅
+        let sleepCycle:Int = 5400 //1시간 30분이 한 싸이클
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let currentHour = calendar.component(.hour, from: currentDate)
+        let currentMin = calendar.component(.minute, from: currentDate) //현재 시각 받음
+        let currentTimeAsSecond = (currentHour*60*60)+(currentMin*60) //00:00부터 현재시각까지의 시간을 초로 합해서 계산함
+        let setTime = self.onDidChangeDate(sender: HomeDatePicker) //datepicker에서 바뀐 값 가져옴
+        let setHour = Int(setTime[0]) ?? 0 //string 배열로 온 값을 int로 형변환
+        let setMin = Int(setTime[1]) ?? 0
+        let setTimeAsSecond:Int = (setHour*60*60)+(setMin*60) //00:00부터 datepicker에서 받은 시각까지의 시간을 초로 합해서 계산함.
+        
+        func isWakeUpTimeSameDay(inputTime:Int, startTime: Int) -> Int {
+            var mustWakeUpTime:Int
+            if (inputTime < startTime){ //다른날이라 다음날로 알람을 넘겨야 됨
+                mustWakeUpTime = ((60 * 60 * 24) - startTime) + inputTime
+            }
+            else{ //같은날이니깐 단순하게 그날 알람 울리면 됨
+                mustWakeUpTime = inputTime - startTime
+            }
+            return mustWakeUpTime
+        }
+        
+        var temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
+        
+        func cycleDuringSleep(wakeUpTime:Int)->Int {
+            let leftOverTime = (wakeUpTime % sleepCycle)
+            if (leftOverTime < allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
+                return (wakeUpTime - leftOverTime) //싸이클 맞추기
+            }
+            else{
+                return wakeUpTime
+            }
+        }
+        
+        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
+        print(mustWakeUpTime)
+        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
+}
     
     @IBOutlet weak var HomeDatePicker: UIDatePicker!
     
@@ -54,15 +96,11 @@ class MainViewController: UIViewController {
         let returnStr = returnSelectedDate.components(separatedBy: " ")
 //        let returnHour = Int(returnStr[0]) ?? 0
 //        let returnMin = Int(returnStr[1]) ?? 0
-        print(returnStr)
         return returnStr
     }
 
     
 
-    @IBAction func HomeSleepNowButtonClicked(_ sender: Any) {
-       
-    }
     /*
     // MARK: - Navigation
 
