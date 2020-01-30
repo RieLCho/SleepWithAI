@@ -41,19 +41,21 @@ class MainViewController: UIViewController {
         
         var temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
         
-        func cycleDuringSleep(wakeUpTime:Int)->Int {
-            let leftOverTime = (wakeUpTime % sleepCycle)
-            if (leftOverTime < allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
-                return (wakeUpTime - leftOverTime) //싸이클 맞추기
-            }
-            else{
-                return wakeUpTime
-            }
-        }
-        
-        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
-        print(mustWakeUpTime)
-        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
+//        func cycleDuringSleep(wakeUpTime:Int)->Int {
+//            let leftOverTime = (wakeUpTime % sleepCycle)
+//            if (leftOverTime < allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
+//                return (wakeUpTime - leftOverTime) //싸이클 맞추기
+//            }
+//            else{
+//                return wakeUpTime
+//            }
+//        }
+//
+//        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
+//        print(mustWakeUpTime)
+//        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
+        print(temp)
+        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(temp)) //cycleduringsleep함수 고치면 지우면됨.
 }
     
     @IBOutlet weak var HomeDatePicker: UIDatePicker!
