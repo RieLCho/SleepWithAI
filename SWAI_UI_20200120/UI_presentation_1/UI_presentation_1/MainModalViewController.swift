@@ -12,8 +12,6 @@ import SoundAnalysis
 import RealmSwift
 
 class MainModalViewController: UIViewController {
-    
-    
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
     
@@ -23,9 +21,11 @@ class MainModalViewController: UIViewController {
         var startedSecond: Double
         var endedSecond: Double
         var date: String
+        var sleepDate: String
     }
     
     var recoded:[SleepSoundUnit] = []
+    var currentTime = ""
     var currentLabel = ""
     var currentStarted:Double = -1
     var inputFormat: AVAudioFormat!
@@ -59,6 +59,11 @@ class MainModalViewController: UIViewController {
 //        let realm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
 //        var DB = SleepSoundUnitDB()
+        let rightnow = Date()
+        let today = DateFormatter()
+        today.dateFormat = "yyyy-MM-dd"
+        currentTime = today.string(from: rightnow)
+        
         resultsObserver.delegate = self
         inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
         analyzer = SNAudioStreamAnalyzer(format: inputFormat)
@@ -71,7 +76,7 @@ class MainModalViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         audioEngine.stop()
-        
+        currentStarted = -1
         do {
             let realm = try Realm()
              print(Realm.Configuration.defaultConfiguration.fileURL)
@@ -83,16 +88,17 @@ class MainModalViewController: UIViewController {
 //                    obj.startedSecond = $0.startedSecond
 //                    obj.endedSecond = $0.endedSecond
 //                    return obj
-                    return SleepSoundUnitDB(identifier: $0.identifier, confidence: $0.confidence, startedSecond: $0.startedSecond, endedSecond: $0.endedSecond, date:  $0.date)
+                    return SleepSoundUnitDB(identifier: $0.identifier, confidence: $0.confidence, startedSecond: $0.startedSecond, endedSecond: $0.endedSecond, date: $0.date, sleepDate: $0.sleepDate)
                 }
                 realm.add(dataToAdd)
-                
             }
         } catch {
             print(error)
         }
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     func buildUI()
     {
         self.view.addSubview(placeholderText)
@@ -152,11 +158,11 @@ extension MainModalViewController: SoundClassifierDelegate {
                 self.currentStarted = seconds
                 self.currentLabel = identifier
             } else {
-                self.recoded.append(SleepSoundUnit(identifier: self.currentLabel, confidence: confidence, startedSecond: self.currentStarted, endedSecond: seconds, date: date))
+                self.recoded.append(SleepSoundUnit(identifier: self.currentLabel, confidence: confidence, startedSecond: self.currentStarted, endedSecond: seconds, date: date, sleepDate: currentTime))
                 self.currentLabel = identifier
                 self.currentStarted = seconds
             }
-            //print(self.recoded.count)
+        //print(self.recoded.count)
             print(self.recoded)
             DispatchQueue.main.async {
                 self.transcribedText.text = ("Recognition: \(identifier)")
@@ -173,7 +179,7 @@ class ResultsObserver: NSObject, SNResultsObserving {
         let confidence = classification.confidence * 100.0
         let allDate = Date() // --- 1
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd" // --- 2
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // --- 2
         let date = dateFormatter.string(from: allDate) // --- 3
         if confidence > 60 {
             delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence, seconds: result.timeRange.end.seconds, date: date)

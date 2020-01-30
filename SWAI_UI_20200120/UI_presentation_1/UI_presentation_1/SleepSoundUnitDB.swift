@@ -14,13 +14,15 @@ class SleepSoundUnitDB : Object{
     @objc dynamic var startedSecond: Double = 0
     @objc dynamic var endedSecond: Double = 0
     @objc dynamic var date: String = ""
+    @objc dynamic var sleepDate: String = ""
     
-    init(identifier:String, confidence:Double, startedSecond:Double, endedSecond:Double, date:String) {
+    init(identifier:String, confidence:Double, startedSecond:Double, endedSecond:Double, date:String, sleepDate:String) {
         self.identifier = identifier
         self.confidence = confidence
         self.startedSecond = startedSecond
         self.endedSecond = endedSecond
         self.date = date
+        self.sleepDate = sleepDate
     }
     
     required init() {
