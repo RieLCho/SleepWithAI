@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func HomeSleepNowButtonClicked(_ sender: Any) {
-        let allowedTimeError:Int = 60 * 30 //30분을 오차수용범위라 세팅
+        let allowedTimeError:Int = 60 * 20 //20분을 오차수용범위라 세팅
         let sleepCycle:Int = 5400 //1시간 30분이 한 싸이클
         let currentDate = Date()
         let calendar = Calendar.current
@@ -30,6 +30,9 @@ class MainViewController: UIViewController {
         
         func isWakeUpTimeSameDay(inputTime:Int, startTime: Int) -> Int {
             var mustWakeUpTime:Int
+            if (inputTime == startTime){
+                return (60*60*24)
+            }
             if (inputTime < startTime){ //다른날이라 다음날로 알람을 넘겨야 됨
                 mustWakeUpTime = ((60 * 60 * 24) - startTime) + inputTime
             }
@@ -39,23 +42,26 @@ class MainViewController: UIViewController {
             return mustWakeUpTime
         }
         
-        var temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
+        let temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
         
-//        func cycleDuringSleep(wakeUpTime:Int)->Int {
-//            let leftOverTime = (wakeUpTime % sleepCycle)
-//            if (leftOverTime < allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
-//                return (wakeUpTime - leftOverTime) //싸이클 맞추기
-//            }
-//            else{
-//                return wakeUpTime
-//            }
-//        }
-//
-//        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
-//        print(mustWakeUpTime)
-//        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
-        print(temp)
-        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(temp)) //cycleduringsleep함수 고치면 지우면됨.
+        func cycleDuringSleep(wakeUpTime:Int)->(Int) { //수면시간 취침싸이클 조절
+            if (wakeUpTime < allowedTimeError){
+                return wakeUpTime
+            }
+            let leftOverTime = (wakeUpTime % sleepCycle)
+            if (leftOverTime <= allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
+                return (wakeUpTime - leftOverTime) //싸이클 맞추기
+            }
+            else{
+                return wakeUpTime
+            }
+        }
+
+        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
+        print(mustWakeUpTime)
+        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
+//        print(temp)
+//        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(temp)) //cycleduringsleep함수 고치면 지우면됨.
 }
     
     @IBOutlet weak var HomeDatePicker: UIDatePicker!
