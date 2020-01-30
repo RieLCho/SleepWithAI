@@ -60,8 +60,6 @@ class MainViewController: UIViewController {
         let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
         print(mustWakeUpTime)
         self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
-//        print(temp)
-//        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(temp)) //cycleduringsleep함수 고치면 지우면됨.
 }
     
     @IBOutlet weak var HomeDatePicker: UIDatePicker!
