@@ -73,6 +73,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     extension AppDelegate: UNUserNotificationCenterDelegate {
         
+       @IBAction func checkWakeUp(){
+            let alertController = UIAlertController(title: "Did you get up?", message: "Press OK to turn off alarm", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {UIAlertAction in print("OK")}))
+            alertController.present(alertController, animated:true, completion: nil)
+        }
+        
+        
         func userNotificationCenter(_ center: UNUserNotificationCenter,
                                     willPresent notification: UNNotification,
                                     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -96,13 +103,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let content = UNMutableNotificationContent() // Содержимое уведомления
             let categoryIdentifire = "Delete Notification Type"
             
-            content.title = "Title"
-            content.body = "Body"
+            content.title = "Normal Sleep Mode"
+            content.body = "Time to wkae up!"
             content.sound = UNNotificationSound.default
             content.badge = 1
             content.categoryIdentifier = categoryIdentifire
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: wakeUpTimeSec, repeats: false)//푸시 알림 인터벌 여기서 조정
+            let identifier = "Local Notification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            notificationCenter.add(request) { (error) in
+                if let error = error {
+                    print("Error \(error.localizedDescription)")
+                }
+            }
+            
+            let actionA = UNNotificationAction(identifier: "ActionA", title: "Action A", options: [])
+            let actionB = UNNotificationAction(identifier: "ActionB", title: "Action B", options: [])
+            let category = UNNotificationCategory(identifier: categoryIdentifire,
+                                                  actions: [actionA, actionB],
+                                                  intentIdentifiers: [],
+                                                  options: [])
+            
+            notificationCenter.setNotificationCategories([category])
+        }
+        
+        //IDC 모드 알림 설정
+        func IDCNotification(ageAsString:String) {
+            let ageAsInteger = Int(ageAsString) ?? 0
+            let sleepCycle:Int = 5400
+            var userSleepTime:Int = 0
+            let timeToGetSleep:Int = 60 * 20 //잠에 드는 시간
+                if (ageAsInteger <= 3){
+                    userSleepTime = (sleepCycle * 8 + timeToGetSleep)
+                }
+                else if ((ageAsInteger > 3) && (ageAsInteger <= 6)){
+                    userSleepTime = (sleepCycle * 7 + timeToGetSleep)
+                }
+                else if ((ageAsInteger > 6)&&(ageAsInteger <= 14)){
+                    userSleepTime = (sleepCycle * 6 + timeToGetSleep)
+                }
+                else if ((ageAsInteger > 14)&&(ageAsInteger <= 18)){
+                    userSleepTime = (sleepCycle * 6 + timeToGetSleep)
+                }
+                else if ((ageAsInteger > 18)&&(ageAsInteger <= 26)){
+                    userSleepTime = (sleepCycle * 6 + timeToGetSleep)
+                }
+                else if ((ageAsInteger > 26)&&(ageAsInteger <= 64)){
+                    userSleepTime = (sleepCycle * 5 + timeToGetSleep)
+                }
+                else{
+                    userSleepTime = (sleepCycle * 6 + timeToGetSleep)
+                }
+            let content = UNMutableNotificationContent()
+            let categoryIdentifire = "Delete Notification Type"
+            
+            content.title = "IDC Mode Alarm"
+            content.body = "Time to wake up!"
+            content.sound = UNNotificationSound.default
+//            content.badge = 1
+            content.categoryIdentifier = categoryIdentifire
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(userSleepTime), repeats: false)//푸시 알림 인터벌 여기서 조정
             let identifier = "Local Notification"
             let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
             
@@ -121,5 +183,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             notificationCenter.setNotificationCategories([category])
         }
-    }
+}
 

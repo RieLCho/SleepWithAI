@@ -16,6 +16,7 @@
 		A6C4233423CF0FE90083F73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233223CF0FE90083F73C /* Main.storyboard */; };
 		A6C4233623CF0FEA0083F73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233523CF0FEA0083F73C /* Assets.xcassets */; };
 		A6C4233923CF0FEA0083F73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233723CF0FEA0083F73C /* LaunchScreen.storyboard */; };
+		B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */; };
 		B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */; };
 		E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1623DAB9D000537CFB /* ViewController.swift */; };
 		E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */; };
@@ -43,6 +44,7 @@
 		A6C4233823CF0FEA0083F73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C4233A23CF0FEA0083F73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF09F5FA595A4AB309337F6 /* Pods-UI_presentation_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.release.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.release.xcconfig"; sourceTree = "<group>"; };
+		B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDontCareModeViewController.swift; sourceTree = "<group>"; };
 		B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeViewController.swift; sourceTree = "<group>"; };
 		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */,
 				E87A902423E0912F00E42621 /* MainModalViewController.swift */,
 				E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */,
+				B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */,
 			);
 			path = UI_presentation_1;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
 				A6C4232F23CF0FE90083F73C /* SceneDelegate.swift in Sources */,
 				E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */,
+				B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */,
 				B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
 				E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */,

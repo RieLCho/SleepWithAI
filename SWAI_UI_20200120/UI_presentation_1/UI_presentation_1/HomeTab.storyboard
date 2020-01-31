@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1952.8" y="96.7016491754123"/>
         </scene>
-        <!--Idontcare Mode View-->
+        <!--Dont Care Mode View Controller-->
         <scene sceneID="uhE-3f-8Ss">
             <objects>
-                <viewController id="c6q-uo-Vbg" customClass="IdontcareModeView" sceneMemberID="viewController">
+                <viewController id="c6q-uo-Vbg" customClass="IDontCareModeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BUM-SZ-N5S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +164,7 @@
                                     <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="IDCModeSleepNowButtonClicked:" destination="c6q-uo-Vbg" eventType="touchUpInside" id="Q53-5P-Mah"/>
                                     <segue destination="0dz-L7-7vV" kind="presentation" id="Bhw-3N-0xD"/>
                                 </connections>
                             </button>
@@ -218,6 +219,9 @@
                         <viewLayoutGuide key="safeArea" id="PxM-ip-ard"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Qj4-NT-ul6"/>
+                    <connections>
+                        <outlet property="IDCModeSleepNowButton" destination="pjo-rp-WKk" id="kxD-C9-Q1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUV-np-vkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Tsi-lI-AQF" userLabel="Exit" sceneMemberID="exit"/>
@@ -352,6 +356,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JMB-Id-4nY"/>
+        <segue reference="Bhw-3N-0xD"/>
     </inferredMetricsTieBreakers>
 </document>
