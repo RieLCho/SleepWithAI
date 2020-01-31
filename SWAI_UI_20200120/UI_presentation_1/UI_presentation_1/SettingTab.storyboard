@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plU-8i-kPX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="plU-8i-kPX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="-711" y="896"/>
         </scene>
-        <!--View Controller-->
+        <!--Age View Controller-->
         <scene sceneID="T1M-y3-GZu">
             <objects>
-                <viewController id="1Ut-OC-Yaf" sceneMemberID="viewController">
+                <viewController id="1Ut-OC-Yaf" customClass="AgeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sls-ut-r0x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-iO-vnb">
                                 <rect key="frame" x="-287" y="-96" width="830" height="925"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="We use this personal information only for 'I don't care' mode." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp9-Dr-nMa">
+                                <rect key="frame" x="-277" y="-86" width="343" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="NO1-f0-hfD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your age?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-Bg-Upn">
                                 <rect key="frame" x="29.5" y="157" width="316.5" height="43"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
@@ -109,6 +118,15 @@
                                 <rect key="frame" x="16" y="323" width="343" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="dSL-CF-ZYP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mS-25-ntK">
+                                <rect key="frame" x="16" y="429" width="343" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="l04-9R-hC3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
                                 <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,12 +151,21 @@
                         <viewLayoutGuide key="safeArea" id="XGT-yb-pzE"/>
                     </view>
                     <navigationItem key="navigationItem" id="wcq-HI-rQN">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="aKw-bN-dW4"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="aKw-bN-dW4">
+                            <connections>
+                                <action selector="ageInputSaveButtonClicked:" destination="1Ut-OC-Yaf" id="JtN-45-reJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageInputSaveButton" destination="aKw-bN-dW4" id="RML-Q7-yKO"/>
+                        <outlet property="ageInputTextField" destination="o35-LS-gNb" id="HnN-Dz-hn3"/>
+                        <outlet property="settedUserAgeLabel" destination="2mS-25-ntK" id="Ebk-QR-tRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6U-EP-SJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="895.50224887556226"/>
+            <point key="canvasLocation" x="300" y="896"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ui1-Gd-7hl">
