@@ -73,11 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     extension AppDelegate: UNUserNotificationCenterDelegate {
         
-       @IBAction func checkWakeUp(){
-            let alertController = UIAlertController(title: "Did you get up?", message: "Press OK to turn off alarm", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {UIAlertAction in print("OK")}))
-            alertController.present(alertController, animated:true, completion: nil)
-        }
+//       @IBAction func checkWakeUp(){
+//            let alertController = UIAlertController(title: "Did you get up?", message: "Press OK to turn off alarm", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {UIAlertAction in print("OK")}))
+//            alertController.present(alertController, animated:true, completion: nil)
+//        }
         
         
         func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -130,9 +130,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //IDC 모드 알림 설정
         func IDCNotification(ageAsString:String) {
-            let ageAsInteger = Int(ageAsString) ?? 0
+            let ageAsInteger = Int(ageAsString) ?? 20
             let sleepCycle:Int = 5400
-            var userSleepTime:Int = 0
+            var userSleepTime:Int
             let timeToGetSleep:Int = 60 * 20 //잠에 드는 시간
                 if (ageAsInteger <= 3){
                     userSleepTime = (sleepCycle * 8 + timeToGetSleep)
@@ -155,6 +155,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 else{
                     userSleepTime = (sleepCycle * 6 + timeToGetSleep)
                 }
+            print(userSleepTime)
+            
             let content = UNMutableNotificationContent()
             let categoryIdentifire = "Delete Notification Type"
             

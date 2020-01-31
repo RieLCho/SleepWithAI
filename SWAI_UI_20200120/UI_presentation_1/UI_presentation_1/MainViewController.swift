@@ -74,7 +74,7 @@ class MainViewController: UIViewController {
         
         
         HomeDatePicker.timeZone = NSTimeZone.local
-//        HomeDatePicker.layer.cornerRadius = 5.0
+//        HomeDatePicker.layer.cornerRadius = 50.0
 //        HomeDatePicker.layer.shadowOpacity = 0.5
 //        HomeDatePicker.backgroundColor = UIColor.yellow
         HomeDatePicker.addTarget(self, action: #selector(onDidChangeDate(sender:)), for: .valueChanged)

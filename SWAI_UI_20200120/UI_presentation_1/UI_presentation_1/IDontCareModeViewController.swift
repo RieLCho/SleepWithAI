@@ -11,14 +11,21 @@ import Foundation
 
 
 class IDontCareModeViewController: UIViewController {
-    var ageViewController = AgeViewController?.self
     
-    @IBOutlet weak var IDCModeSleepNowButton: UIButton!
+    var appDelegate = UIApplication.shared.delegate as? AppDelegate
     
-    @IBAction func settingSaveButtonClicked(_ sender: Any) {
-       
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        ageTextField.text = UserDefaults.standard.string(forKey: "inputAge")
     }
     
-    @IBAction func IDCModeSleepNowButtonClicked(userAgeIn:String) {
+    
+    @IBOutlet weak var ageTextField: UITextField!
+
+    
+    @IBAction func IDCModeSleepNowButtonClicked() {
+        self.appDelegate?.IDCNotification(ageAsString: ageTextField.text!)
+        
     }
 }
