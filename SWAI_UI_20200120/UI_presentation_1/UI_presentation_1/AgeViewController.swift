@@ -13,7 +13,7 @@ var agePlaceholder:String = "Write Age Here"
 class AgeViewController: UIViewController {
     @IBOutlet weak var ageInputTextField: UITextField!
     
-    @IBOutlet weak var settedUserAgeLabel: UILabel!
+    //@IBOutlet weak var settedUserAgeLabel: UILabel!
     
     @IBOutlet weak var ageInputSaveButton: UIBarButtonItem!
     

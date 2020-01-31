@@ -6,7 +6,6 @@ target 'UI_presentation_1' do
   use_frameworks!
 
   # Pods for UI_presentation_1
-  pod 'Charts'
   pod 'RealmSwift'
 
 end
