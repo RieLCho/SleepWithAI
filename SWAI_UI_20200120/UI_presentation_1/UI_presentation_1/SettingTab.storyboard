@@ -35,7 +35,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="1Ut-OC-Yaf" kind="show" trigger="accessoryAction" id="mws-pj-XYy"/>
+                                            <segue destination="1Ut-OC-Yaf" kind="show" id="ZhC-vq-BMV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -106,6 +106,7 @@
         <!--Age View Controller-->
         <scene sceneID="T1M-y3-GZu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6U-EP-SJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="1Ut-OC-Yaf" customClass="AgeViewController" customModule="SleepWithAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sls-ut-r0x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -164,9 +165,8 @@
                         <outlet property="ageInputTextField" destination="o35-LS-gNb" id="HnN-Dz-hn3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A6U-EP-SJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="1242"/>
+            <point key="canvasLocation" x="-711" y="1712"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ui1-Gd-7hl">
