@@ -99,7 +99,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //Normal Sleep Mode를 위한 Notification 함수
         func scheduleNotification(wakeUpTimeSec:Double) {
-            
             let content = UNMutableNotificationContent() // Содержимое уведомления
             let categoryIdentifire = "Delete Notification Type"
             
