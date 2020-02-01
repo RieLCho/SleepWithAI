@@ -47,19 +47,20 @@ class CustomCell: UITableViewCell {
         startingX += Int(realWidth)
     }
     func buildUI(data: [SleepSoundUnit]){
-        var allSecond = 0.00
+        var allSecond = Int()
         for i in 0..<data.count {
-            allSecond += data[i].endedSecond - data[i].startedSecond
+            allSecond += (data[i].endedSecond - data[i].startedSecond)
         }
         for i in 0..<data.count {
             if data[i].identifier == "snoring" {
-                creatingData(widthOfData: 288 * (data[i].endedSecond - data[i].startedSecond) / allSecond , dataViewColor: .red)
+                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .red)
+                
             } else if data[i].identifier == "sleeptalking" {
-                creatingData(widthOfData: 288 * (data[i].endedSecond - data[i].startedSecond) / allSecond , dataViewColor: .orange)
+                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .orange)
             } else if data[i].identifier == "tortion" {
-                creatingData(widthOfData: 288 * (data[i].endedSecond - data[i].startedSecond) / allSecond , dataViewColor: .yellow)
+                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .yellow)
             } else if data[i].identifier == "breathing" {
-                creatingData(widthOfData: 288 * (data[i].endedSecond - data[i].startedSecond) / allSecond , dataViewColor: .blue)
+                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .blue)
             } else{
                 print("error")
             }
@@ -68,6 +69,7 @@ class CustomCell: UITableViewCell {
         //끝 구별하려고 검은색 넣음
         
         startingX = 16
+        
     }
 
     

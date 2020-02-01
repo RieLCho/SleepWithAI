@@ -12,3 +12,11 @@ struct DayData: Hashable {
     var day: String
     var sleepData: [SleepSoundUnit]
 }
+
+struct WholeData {
+    var identifier = ["snoring","sleeptalking","tortion","breathing"]
+    var secondsOfIdentifier = [1.0, 1.0, 1.0, 1.0]
+}
+
+var wholeData = WholeData()
+

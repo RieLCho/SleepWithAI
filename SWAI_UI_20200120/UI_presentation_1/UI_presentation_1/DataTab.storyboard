@@ -34,6 +34,15 @@
                                     <action selector="switchSegmentedCtrlViewAction:" destination="qqr-dL-yrt" eventType="valueChanged" id="oc4-7K-KJm"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhq-ln-ijI" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mae-tq-gHp">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLZ-mA-0en">
                                 <rect key="frame" x="0.0" y="141" width="375" height="526"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -45,10 +54,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wPu-lx-YNa" firstAttribute="trailing" secondItem="mae-tq-gHp" secondAttribute="trailing" id="28R-U9-Hba"/>
+                            <constraint firstItem="wPu-lx-YNa" firstAttribute="trailing" secondItem="qhq-ln-ijI" secondAttribute="trailing" id="5ha-Mb-kje"/>
                             <constraint firstItem="CLZ-mA-0en" firstAttribute="centerX" secondItem="J41-zE-UbF" secondAttribute="centerX" id="6aL-Ym-bok"/>
+                            <constraint firstItem="qhq-ln-ijI" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" id="7Yp-ZG-kzV"/>
                             <constraint firstItem="CLZ-mA-0en" firstAttribute="bottom" secondItem="wPu-lx-YNa" secondAttribute="bottom" id="E8s-TG-yRQ"/>
+                            <constraint firstItem="wPu-lx-YNa" firstAttribute="bottom" secondItem="mae-tq-gHp" secondAttribute="bottom" id="Hew-Tb-7nc"/>
+                            <constraint firstItem="qhq-ln-ijI" firstAttribute="top" secondItem="wPu-lx-YNa" secondAttribute="top" constant="97" id="U2B-mC-XQa"/>
                             <constraint firstItem="m7X-os-D6V" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" constant="20" id="VJ0-Xa-wbD"/>
                             <constraint firstItem="m7X-os-D6V" firstAttribute="top" secondItem="wPu-lx-YNa" secondAttribute="top" constant="24" id="abw-wq-zaD"/>
+                            <constraint firstItem="mae-tq-gHp" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" id="cYC-F7-Kse"/>
+                            <constraint firstItem="wPu-lx-YNa" firstAttribute="bottom" secondItem="qhq-ln-ijI" secondAttribute="bottom" id="eMT-x8-fzN"/>
+                            <constraint firstItem="mae-tq-gHp" firstAttribute="top" secondItem="m7X-os-D6V" secondAttribute="bottom" constant="43" id="var-ij-9dG"/>
                             <constraint firstItem="CLZ-mA-0en" firstAttribute="top" secondItem="m7X-os-D6V" secondAttribute="bottom" constant="43" id="wy6-5y-D68"/>
                             <constraint firstItem="m7X-os-D6V" firstAttribute="trailing" secondItem="J41-zE-UbF" secondAttribute="trailingMargin" id="wzG-Sh-PpA"/>
                             <constraint firstItem="CLZ-mA-0en" firstAttribute="leading" secondItem="wPu-lx-YNa" secondAttribute="leading" id="z3M-Cu-h52"/>
@@ -57,7 +74,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="WJD-yt-MAV"/>
                     <connections>
+                        <outlet property="backgroundView" destination="mae-tq-gHp" id="JQI-NY-zXd"/>
                         <outlet property="tableView" destination="CLZ-mA-0en" id="vaM-77-N20"/>
+                        <outlet property="wholeDataChartView" destination="qhq-ln-ijI" id="fau-sl-evF"/>
                         <segue destination="HuW-OU-DaK" kind="show" identifier="datatabsegue" id="ohB-W3-Rm2"/>
                     </connections>
                 </viewController>
