@@ -105,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             content.title = "Normal Sleep Mode"
             content.body = "Time to wake up!"
             content.sound = UNNotificationSound.default
-            content.badge = 1
+//            content.badge = 1
             content.categoryIdentifier = categoryIdentifire
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: wakeUpTimeSec, repeats: false)//푸시 알림 인터벌 여기서 조정
