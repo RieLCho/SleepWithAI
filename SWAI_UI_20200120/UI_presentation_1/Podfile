@@ -7,5 +7,6 @@ target 'UI_presentation_1' do
 
   # Pods for UI_presentation_1
   pod 'RealmSwift'
+  pod 'Charts'
 
 end
