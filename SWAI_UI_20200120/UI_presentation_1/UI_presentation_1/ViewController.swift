@@ -50,7 +50,7 @@ extension ViewController: UITableViewDataSource {
         
         //let str = data[self.index ?? 0][indexPath.row].components(separatedBy: " ")
         //cell.custominit(text: str[1], accessoryText: str[0])
-        
+        cell.prepareForReuse()
         cell.titleLabel.text = self.dataSource[indexPath.row].day
         cell.buildUI(data: self.dataSource[indexPath.row].sleepData)
         

@@ -14,6 +14,8 @@ import RealmSwift
 class MainModalViewController: UIViewController {
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
+    private var toWakeUp:Date? = (Date() + 3)
+    private var audioPlayer: AVAudioPlayer? = nil
     
     struct SleepSoundUnit {
         var identifier: String
@@ -32,7 +34,6 @@ class MainModalViewController: UIViewController {
     var analyzer: SNAudioStreamAnalyzer!
     var resultsObserver = ResultsObserver()
     let analysisQueue = DispatchQueue(label: "com.custom.AnalysisQueue")
-    
     let transcribedText:UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -167,6 +168,17 @@ extension MainModalViewController: SoundClassifierDelegate {
             }
         //print(self.recoded.count)
             print(self.recoded)
+            if identifier == "sleeptalking", let wake = self.toWakeUp {
+                if wake.timeIntervalSince1970 < Date().timeIntervalSince1970 {
+                    audioEngine.inputNode.removeTap(onBus: 0)
+                    self.audioEngine.stop()
+                    //오디오 재생
+                    if let path = Bundle.main.url(forResource: "SundayBeatEdited", withExtension: "wav") {
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path)
+                        self.audioPlayer?.play()
+                    }
+                }
+            }
             DispatchQueue.main.async {
                 self.transcribedText.text = ("Recognition: \(identifier)")
             }
