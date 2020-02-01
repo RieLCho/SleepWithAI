@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             completionHandler()
         }
-        
+        //Normal Sleep Mode를 위한 Notification 함수
         func scheduleNotification(wakeUpTimeSec:Double) {
             
             let content = UNMutableNotificationContent() // Содержимое уведомления
@@ -128,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             notificationCenter.setNotificationCategories([category])
         }
         
-        //IDC 모드 알림 설정
+        //I Don't Care Mode Notification
         func IDCNotification(ageAsString:String) {
             let ageAsInteger = Int(ageAsString) ?? 20
             let sleepCycle:Int = 5400
