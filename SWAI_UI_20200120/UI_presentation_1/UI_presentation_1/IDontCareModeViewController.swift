@@ -20,7 +20,6 @@ class IDontCareModeViewController: UIViewController {
         ageTextField.text = UserDefaults.standard.string(forKey: "inputAge")
     }
     
-    
     @IBOutlet weak var ageTextField: UITextField!
 
     

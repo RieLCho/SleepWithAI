@@ -75,6 +75,7 @@ class MainModalViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        audioEngine.inputNode.removeTap(onBus: 0)
         audioEngine.stop()
         currentStarted = -1
         do {

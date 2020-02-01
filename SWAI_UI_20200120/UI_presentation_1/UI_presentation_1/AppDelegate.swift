@@ -99,7 +99,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         func scheduleNotification(wakeUpTimeSec:Double) {
-            
             let content = UNMutableNotificationContent() // Содержимое уведомления
             let categoryIdentifire = "Delete Notification Type"
             

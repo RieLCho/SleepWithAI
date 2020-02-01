@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A60238E923DDC58E00A9B854 /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60238E823DDC58E00A9B854 /* DayData.swift */; };
 		A636D3BA23D5B1860040FC04 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A636D3B923D5B1860040FC04 /* SettingTab.storyboard */; };
 		A636D3BC23D5B2740040FC04 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A636D3BB23D5B2740040FC04 /* HomeTab.storyboard */; };
 		A6A7046123D691450027504B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7046023D691450027504B /* MainViewController.swift */; };
@@ -18,6 +17,9 @@
 		A6C4233923CF0FEA0083F73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233723CF0FEA0083F73C /* LaunchScreen.storyboard */; };
 		B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */; };
 		B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */; };
+		E840218423E5250A004A505B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840218323E5250A004A505B /* API.swift */; };
+		E840218723E527B0004A505B /* SleepSoundUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840218623E527B0004A505B /* SleepSoundUnit.swift */; };
+		E840218923E527BC004A505B /* DayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840218823E527BC004A505B /* DayData.swift */; };
 		E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1623DAB9D000537CFB /* ViewController.swift */; };
 		E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */; };
 		E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84D3D1A23DADB6300537CFB /* DataTab.storyboard */; };
@@ -32,7 +34,6 @@
 /* Begin PBXFileReference section */
 		282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_presentation_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8C21AF1F0AD78EEF1EF339 /* Pods-UI_presentation_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.debug.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.debug.xcconfig"; sourceTree = "<group>"; };
-		A60238E823DDC58E00A9B854 /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
 		A636D3B923D5B1860040FC04 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
 		A636D3BB23D5B2740040FC04 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		A6A7046023D691450027504B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +47,9 @@
 		AAF09F5FA595A4AB309337F6 /* Pods-UI_presentation_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.release.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.release.xcconfig"; sourceTree = "<group>"; };
 		B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDontCareModeViewController.swift; sourceTree = "<group>"; };
 		B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeViewController.swift; sourceTree = "<group>"; };
+		E840218323E5250A004A505B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E840218623E527B0004A505B /* SleepSoundUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSoundUnit.swift; sourceTree = "<group>"; };
+		E840218823E527BC004A505B /* DayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayData.swift; sourceTree = "<group>"; };
 		E84D3D1623DAB9D000537CFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
@@ -71,7 +75,7 @@
 		A60238E723DDC54A00A9B854 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A60238E823DDC58E00A9B854 /* DayData.swift */,
+				E840218323E5250A004A505B /* API.swift */,
 			);
 			name = API;
 			path = ..;
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */,
+				E840218523E5277B004A505B /* Model */,
 				A60238E723DDC54A00A9B854 /* API */,
 				E8DF0CAC23DAB48A00D6FF0B /* Cells */,
 				A6C4233223CF0FE90083F73C /* Main.storyboard */,
@@ -136,6 +141,15 @@
 				282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E840218523E5277B004A505B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E840218623E527B0004A505B /* SleepSoundUnit.swift */,
+				E840218823E527BC004A505B /* DayData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E8DF0CAC23DAB48A00D6FF0B /* Cells */ = {
@@ -267,13 +281,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C4232D23CF0FE90083F73C /* AppDelegate.swift in Sources */,
+				E840218723E527B0004A505B /* SleepSoundUnit.swift in Sources */,
 				E87A903023E2B8CF00E42621 /* SleepSoundUnitDB.swift in Sources */,
 				E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */,
-				A60238E923DDC58E00A9B854 /* DayData.swift in Sources */,
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
+				E840218923E527BC004A505B /* DayData.swift in Sources */,
 				A6C4232F23CF0FE90083F73C /* SceneDelegate.swift in Sources */,
 				E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */,
 				B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */,
+				E840218423E5250A004A505B /* API.swift in Sources */,
 				B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
 				E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */,
