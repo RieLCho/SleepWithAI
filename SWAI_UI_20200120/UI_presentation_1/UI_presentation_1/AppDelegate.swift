@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let categoryIdentifire = "Delete Notification Type"
             
             content.title = "Normal Sleep Mode"
-            content.body = "Time to wkae up!"
+            content.body = "Time to wake up!"
             content.sound = UNNotificationSound.default
             content.badge = 1
             content.categoryIdentifier = categoryIdentifire
