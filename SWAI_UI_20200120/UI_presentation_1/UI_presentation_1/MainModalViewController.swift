@@ -14,7 +14,8 @@ import RealmSwift
 class MainModalViewController: UIViewController {
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
-    private var toWakeUp:Date? = (Date() + 3)
+    public var sleepTime: Int?
+    private var toWakeUp:Date? = Date()
     private var audioPlayer: AVAudioPlayer? = nil
     
     struct SleepSoundUnit {
@@ -56,13 +57,16 @@ class MainModalViewController: UIViewController {
         return view
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        let realm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
 //        var DB = SleepSoundUnitDB()
+        //print(sleepTime)
         let rightnow = Date()
+        
         let today = DateFormatter()
         today.dateFormat = "yyyy-MM-dd"
         currentTime = today.string(from: rightnow)
@@ -168,7 +172,10 @@ extension MainModalViewController: SoundClassifierDelegate {
             }
         //print(self.recoded.count)
             print(self.recoded)
-            if identifier == "sleeptalking", let wake = self.toWakeUp {
+            if identifier == "sleeptalking", var wake = self.toWakeUp {
+                wake = wake + Double(sleepTime!)
+                print(wake)
+                print(wake.timeIntervalSince1970)
                 if wake.timeIntervalSince1970 < Date().timeIntervalSince1970 {
                     audioEngine.inputNode.removeTap(onBus: 0)
                     self.audioEngine.stop()

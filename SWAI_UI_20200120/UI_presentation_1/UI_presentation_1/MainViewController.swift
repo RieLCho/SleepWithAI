@@ -10,7 +10,8 @@ import UIKit
 import UserNotifications
 
 class MainViewController: UIViewController {
-
+    
+    var sleepTime:Int = 0
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
     }
@@ -43,30 +44,38 @@ class MainViewController: UIViewController {
         }
         
         let temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
+        sleepTime = temp
+        performSegue(withIdentifier: "sleepingMode", sender: sleepTime)
         
-        func cycleDuringSleep(wakeUpTime:Int)->(Int) { //수면시간 취침싸이클 조절
-            if (wakeUpTime < allowedTimeError){
-                return wakeUpTime
-            }
-            let leftOverTime = (wakeUpTime % sleepCycle)
-            if (leftOverTime <= allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
-                return (wakeUpTime - leftOverTime) //싸이클 맞추기
-            }
-            else{
-                return wakeUpTime
-            }
-        }
+//        func cycleDuringSleep(wakeUpTime:Int)->(Int) { //수면시간 취침싸이클 조절
+//            if (wakeUpTime < allowedTimeError){
+//                return wakeUpTime
+//            }
+//            let leftOverTime = (wakeUpTime % sleepCycle)
+//            if (leftOverTime <= allowedTimeError){ //셋팅된 시각보다 전에 싸이클이 끝날경우에
+//                return (wakeUpTime - leftOverTime) //싸이클 맞추기
+//            }
+//            else{
+//                return wakeUpTime
+//            }
+//        }
 
-        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
-        print(mustWakeUpTime)
-        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
+//        let mustWakeUpTime = cycleDuringSleep(wakeUpTime: temp)
+//        print(mustWakeUpTime)
+//        self.appDelegate?.scheduleNotification(wakeUpTimeSec: Double(mustWakeUpTime))
 }
     
     @IBOutlet weak var HomeDatePicker: UIDatePicker!
     
     @IBOutlet weak var HomeTextField: UITextField!
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "sleepingMode"
+            {
+                if let destinationVC = segue.destination as? MainModalViewController {
+                    destinationVC.sleepTime = sleepTime
+                }
+            }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

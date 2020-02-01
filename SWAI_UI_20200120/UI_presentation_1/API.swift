@@ -21,7 +21,8 @@ class API: NSObject {
         today.locale = Locale.current
         return today
     }
-
+    //var temp: Int
+    
     func dayData(dayRange: Int) -> [DayData] {
         var result:[DayData] = []
         // 1. day 라벨에 쓸 날짜 배열

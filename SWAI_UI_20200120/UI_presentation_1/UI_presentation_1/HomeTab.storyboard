@@ -37,7 +37,7 @@
                                 </state>
                                 <connections>
                                     <action selector="HomeSleepNowButtonClicked:" destination="n3X-61-x8i" eventType="touchUpInside" id="J6Z-FQ-EhA"/>
-                                    <segue destination="0dz-L7-7vV" kind="push" id="lix-s4-M6u"/>
+                                    <segue destination="0dz-L7-7vV" kind="push" identifier="sleepingMode" id="lix-s4-M6u"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep With AI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-KJ-irx">
@@ -384,6 +384,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GfM-36-d0f"/>
+        <segue reference="lix-s4-M6u"/>
     </inferredMetricsTieBreakers>
 </document>
