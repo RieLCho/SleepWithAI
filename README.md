@@ -1,33 +1,25 @@
 # SleepWithAI
-SleepWIthAI(SWAI) is application for users who want to sleep efficiently with personally optimized data. Application will recommend the best time to wake up.
+SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data. SWAI will recommend and turn on the alram at best time to wake up.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You can see more detailed function at [SWAI Marketing Website](https://projectintheclass.github.io/SleepWithAI/)
 
-### How to Install
+### Installation
 
-You can install on iOS devices (iOS 13+) at Appstore. 
+You can install on iOS devices (iOS 13+) at [Appstore](https://apps.apple.com/kr/app/). 
 
-## Running the tests
+### How this Application Wake User
 
-Explain how to run the automated tests for this system
+There are two main modes to wake up.
 
-### Break down into end to end tests
+* **Normal Sleep Mode**
 
-Explain what these tests test and why
+Normal Sleep Mode is for who needs to wake up at certain time. User can set time at Home tab with date picker. After clicking 'Sleep Now' button, SWAI will automatically record your sleeping sound and classify with CoreML machine learning model.
 
-```
-Give an example
-```
+* **I Don't Care Mode (A.K.A. IDC)**
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+I Don't Care Mode is for who doesn't need to wake up at certain time. Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up. SWAI will automatically get optimized sleep duration time and wake user up.
 
 ## Built With
 
@@ -45,7 +37,7 @@ Give an example
 
 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ProjectInTheClass/SleepWithAI/pulse) who participated in this project.
 
 ## License
 
@@ -53,6 +45,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* sleepyti.me - Quite different from our project, but initial idea was from this website.
+* [Charts](https://github.com/danielgindi/Charts) - Used Cocoapod Framework for showing sleeping sound data to user.
