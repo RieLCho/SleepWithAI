@@ -184,12 +184,17 @@ extension MainModalViewController: SoundClassifierDelegate {
                         self.audioPlayer?.play()
                     }
                     //알림창
+                    DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Alarm", message: "Click 'OK' Button", preferredStyle: UIAlertController.Style.alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    //alert.addAction(defaultAction)
+                        let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler: { (UIAlertAction) in
+                            self.audioPlayer?.stop()
+                        })
+                    alert.addAction(defaultAction)
                     self.present(alert, animated: true, completion: nil)
+                    
 
                     //오디오 재생
+                    }
                 }
             }
             DispatchQueue.main.async {
