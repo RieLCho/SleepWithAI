@@ -17,15 +17,67 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-SK-j5N">
-                        <rect key="frame" x="139" y="10" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="135" y="10" width="50.5" height="21.5"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vHJ-cD-jIJ">
+                        <rect key="frame" x="33" y="122" width="254.5" height="20"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lk-ZK-U37">
+                                <rect key="frame" x="0.0" y="5" width="10" height="10"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="9n7-rt-IS1"/>
+                                    <constraint firstAttribute="width" constant="10" id="Yph-cB-XVw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVp-gk-cWI">
+                                <rect key="frame" x="16" y="3" width="64.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBZ-Ff-bk0">
+                                <rect key="frame" x="86.5" y="5" width="10" height="10"/>
+                                <color key="backgroundColor" red="1" green="0.5938570205" blue="0.52017337330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="8Ve-6k-d21"/>
+                                    <constraint firstAttribute="height" constant="10" id="iDA-lH-laL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snoring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xP-f8-0Ee">
+                                <rect key="frame" x="102.5" y="3" width="47" height="14"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uC-Dg-ltS">
+                                <rect key="frame" x="155.5" y="5" width="10" height="10"/>
+                                <color key="backgroundColor" red="0.88562178940000003" green="0.31798480309999999" blue="0.52017337330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="0xT-Mf-bd5"/>
+                                    <constraint firstAttribute="height" constant="10" id="7MS-IQ-X45"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Talking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SS8-xm-oOh">
+                                <rect key="frame" x="171.5" y="3" width="83" height="14"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Ego-7d-cnE"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="vHJ-cD-jIJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0TA-YI-XEB"/>
                     <constraint firstItem="2oG-SK-j5N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UbQ-Oe-CNi"/>
                     <constraint firstItem="2oG-SK-j5N" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="XgN-su-qoe"/>
+                    <constraint firstAttribute="bottom" secondItem="vHJ-cD-jIJ" secondAttribute="bottom" constant="8" id="ina-uF-bVQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

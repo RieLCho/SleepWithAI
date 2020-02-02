@@ -49,8 +49,8 @@ class IDontCareModeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ageTextField.text = UserDefaults.standard.string(forKey: "inputAge")
-        userAge = UserDefaults.standard.string(forKey: "inputAge") ?? "20"
-        if(userAge == "20"){
+        userAge = UserDefaults.standard.string(forKey: "inputAge") ?? "0"
+        if(userAge == "0"){
             DispatchQueue.main.async {
             let alert = UIAlertController(title: "Set your Age", message: "You can set your age at Setting. \nWith your age, SWAI can recommend better sleep duration time.", preferredStyle: UIAlertController.Style.alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)

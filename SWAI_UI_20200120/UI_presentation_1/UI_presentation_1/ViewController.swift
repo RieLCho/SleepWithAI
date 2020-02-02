@@ -45,9 +45,7 @@ class ViewController: UIViewController {
                     self.secondsOfIdentifier[0] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "sleeptalking" {
                     self.secondsOfIdentifier[1] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
-                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "tortion" {
-                    self.secondsOfIdentifier[2] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
-                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "background" {
+                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "breathing" {
                     self.secondsOfIdentifier[3] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else {
                     print("error")
@@ -72,33 +70,8 @@ class ViewController: UIViewController {
         }
     }
     
-    func makeWholeData() {
-        //print("dataSourceForWholeData : \(self.dataSourceForWholeData.count)")
-        
-        /*for j in 0..<allDayData.count {
-            for i in 0..<allDayData[j].sleepData.count {
-                if allDayData[j].sleepData[i].identifier == "snoring" {
-                    self.wholeData.secondsOfIdentifier[0] += (allDayData[j].sleepData[i].endedSecond - allDayData[j].sleepData[i].startedSecond)
-                    //print("OK")
-                    
-                } else if allDayData[j].sleepData[i].identifier == "sleeptalking" {
-                    self.wholeData.secondsOfIdentifier[1] += (allDayData[j].sleepData[i].endedSecond - allDayData[j].sleepData[i].startedSecond)
-                    
-                } else if allDayData[j].sleepData[i].identifier == "tortion" {
-                    self.wholeData.secondsOfIdentifier[2] += (allDayData[j].sleepData[i].endedSecond - allDayData[j].sleepData[i].startedSecond)
-                
-                } else if allDayData[j].sleepData[i].identifier == "breathing" {
-                    self.wholeData.secondsOfIdentifier[3] += (allDayData[j].sleepData[i].endedSecond - allDayData[j].sleepData[i].startedSecond)
-                
-                } else{
-                    print("error")
-                }
-            }
-        }*/
-    }
-    
     private func colorsOfPieCharts(numbersOfColor: Int) -> [UIColor] {
-        let colors: [UIColor] = [.red, .orange, .yellow, .blue]
+        let colors: [UIColor] = [colorOfSnoringData,colorOfSleeptalkingData,colorOfBackgroundData]
         /*for _ in 0..<numbersOfColor {
           let red = Double(arc4random_uniform(256))
           let green = Double(arc4random_uniform(256))

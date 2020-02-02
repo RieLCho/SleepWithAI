@@ -122,7 +122,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-WY-0YN">
-                                <rect key="frame" x="10" y="188" width="355" height="175"/>
+                                <rect key="frame" x="10" y="238" width="355" height="175"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-FP-4ZV" customClass="PieChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
@@ -186,12 +186,57 @@
                                     <constraint firstAttribute="height" constant="175" id="yT5-DK-Mr0"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yon-Aj-MPg">
+                                <rect key="frame" x="10" y="463" width="355" height="96"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-DQ-aUA">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snoring : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-Kc-aG7">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Talking :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRC-kk-8C8">
+                                                <rect key="frame" x="0.0" y="74.5" width="142" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="i3V-oT-mJE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="L7Q-Ga-t1K">
+                                        <rect key="frame" x="155" y="0.0" width="200" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcY-1h-plj">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-5Q-g37">
+                                                <rect key="frame" x="0.0" y="74.5" width="200" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yon-Aj-MPg" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="10" id="BXo-ud-ybO"/>
+                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="yon-Aj-MPg" secondAttribute="trailing" constant="10" id="FAl-hK-LTP"/>
                             <constraint firstItem="i0N-WY-0YN" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="10" id="H52-IL-WPg"/>
+                            <constraint firstItem="yon-Aj-MPg" firstAttribute="top" secondItem="i0N-WY-0YN" secondAttribute="bottom" constant="50" id="IS8-Bd-1A6"/>
                             <constraint firstItem="ImZ-gu-YWU" firstAttribute="top" secondItem="nHS-kL-2Uh" secondAttribute="top" constant="20" id="NOY-jn-4hy"/>
-                            <constraint firstItem="i0N-WY-0YN" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="100" id="eRO-zH-i4e"/>
+                            <constraint firstItem="i0N-WY-0YN" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="150" id="eRO-zH-i4e"/>
                             <constraint firstItem="ImZ-gu-YWU" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="tzQ-FG-QyE"/>
                             <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="i0N-WY-0YN" secondAttribute="trailing" constant="10" id="w6R-jv-bFP"/>
                         </constraints>
@@ -202,6 +247,8 @@
                         <outlet property="dataDetailPieChartView" destination="EqC-FP-4ZV" id="aBN-Xl-iA1"/>
                         <outlet property="deepSleepLabel" destination="PVt-8v-Uvw" id="3k5-2g-tV0"/>
                         <outlet property="lightSleepLabel" destination="mGI-TP-h05" id="jlb-fW-c2H"/>
+                        <outlet property="sleeptalkingDataLabel" destination="aWV-5Q-g37" id="O9a-8x-gCD"/>
+                        <outlet property="snoringDataLabel" destination="jcY-1h-plj" id="LYR-Cf-Yma"/>
                         <outlet property="titleLabel" destination="ImZ-gu-YWU" id="7d6-wM-R3l"/>
                         <outlet property="wholeSleepLabel" destination="aZM-vf-1UA" id="8dj-S6-p40"/>
                     </connections>

@@ -16,12 +16,22 @@ class DataTabDescViewController: UIViewController {
     @IBOutlet weak var wholeSleepLabel: UILabel!
     @IBOutlet weak var lightSleepLabel: UILabel!
     @IBOutlet weak var deepSleepLabel: UILabel!
+    @IBOutlet weak var snoringDataLabel: UILabel!
+    @IBOutlet weak var sleeptalkingDataLabel: UILabel!
     
     var dataDetail: DayData? = nil
-    
     var pieChartPart: [String] = ["Light sleep", "Deep sleep"]
-    
     var pieChartData: [Double] = [0.0, 0.0]
+    var snoringData: Double = 0.0
+    var sleeptalkingData: Double = 0.0
+    
+    func printTime (seconds: Double) -> String {
+        let hour = Int(seconds / 3600)
+        let minute = Int(seconds / 60) - hour
+        let second = Int(seconds) - hour - minute
+        let printString: String = "\(hour)h \(minute)m \(second)s"
+        return printString
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +42,10 @@ class DataTabDescViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         buildUI(data: dataDetail!.sleepData)
         customizePieChart(dataPoints: pieChartPart, values: pieChartData)
-        let lightSleepHour = Int(pieChartData[0] / 3600)
-        let lightSleepMinute = Int(pieChartData[0] / 60) - lightSleepHour
-        let lightSleepSecond = Int(pieChartData[0]) - lightSleepHour - lightSleepMinute
-        let deepSleepHour = Int(pieChartData[1] / 3600)
-        let deepSleepMinute = Int(pieChartData[1] / 60) - deepSleepHour
-        let deepSleepSecond = Int(pieChartData[1]) - deepSleepHour - deepSleepMinute
-
-        lightSleepLabel.text = "\(lightSleepHour)h \(lightSleepMinute)m \(lightSleepSecond)s"
-        deepSleepLabel.text = "\(deepSleepHour)h \(deepSleepMinute)m \(deepSleepSecond)s"
+        lightSleepLabel.text = printTime(seconds: pieChartData[0])
+        deepSleepLabel.text = printTime(seconds: pieChartData[1])
+        sleeptalkingDataLabel.text = printTime(seconds: sleeptalkingData)
+        snoringDataLabel.text = printTime(seconds: snoringData)
     }
 
     var startingX = 16
@@ -59,34 +64,35 @@ class DataTabDescViewController: UIViewController {
             allSecond += (data[i].endedSecond - data[i].startedSecond)
         }
         if allSecond != 0.0 {
-            let hour = Int(allSecond / 3600)
-            let minute = Int(allSecond / 60) - hour
-            let second = Int(allSecond) - hour - minute
-            wholeSleepLabel.text = "\(hour)h \(minute)m \(second)s"
+            wholeSleepLabel.text = printTime(seconds: allSecond)
             for i in 0..<data.count {
                 if data[i].identifier == "snoring" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .red)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSnoringData)
                     self.pieChartData[1] += (data[i].endedSecond - data[i].startedSecond)
+                    self.snoringData += (data[i].endedSecond - data[i].startedSecond)
+                    
                 } else if data[i].identifier == "sleeptalking" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .orange)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSleeptalkingData)
                     self.pieChartData[0] += (data[i].endedSecond - data[i].startedSecond)
-                } else if data[i].identifier == "tortion" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .yellow)
-                    self.pieChartData[0] += (data[i].endedSecond - data[i].startedSecond)
+                    self.sleeptalkingData += (data[i].endedSecond - data[i].startedSecond)
+                    
                 } else if data[i].identifier == "breathing" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .blue)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfBackgroundData)
                     self.pieChartData[1] += (data[i].endedSecond - data[i].startedSecond)
+                
+                } else {
+                    continue
                 }
             }
         }else {
-        creatingData(widthOfData: 1, dataViewColor: .black)
+            creatingData(widthOfData: 1, dataViewColor: .black)
         }
         
         startingX = 16
     }
 
     private func colorsOfPieCharts(numbersOfColor: Int) -> [UIColor] {
-        let colors: [UIColor] = [.yellow, .blue]
+        let colors: [UIColor] = [colorOfLightSleepData, colorOfDeepSleepData]
         /*for _ in 0..<numbersOfColor {
           let red = Double(arc4random_uniform(256))
           let green = Double(arc4random_uniform(256))
@@ -115,7 +121,9 @@ class DataTabDescViewController: UIViewController {
         let formatter = DefaultValueFormatter(formatter: format)
         pieChartData.setValueFormatter(formatter)
         // 4. Assign it to the chart’s data
-        dataDetailPieChartView.data = pieChartData
+        if (values[0] != 0.0 && values[0] != 0.0) {
+            dataDetailPieChartView.data = pieChartData
+        }
     }
 
 }

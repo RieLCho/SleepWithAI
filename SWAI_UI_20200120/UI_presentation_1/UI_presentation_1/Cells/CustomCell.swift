@@ -53,15 +53,13 @@ class CustomCell: UITableViewCell {
         if allSecond != 0.0 {
             for i in 0..<data.count {
                 if data[i].identifier == "snoring" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .red)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSnoringData)
                 } else if data[i].identifier == "sleeptalking" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .orange)
-                } else if data[i].identifier == "tortion" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .yellow)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSleeptalkingData)
                 } else if data[i].identifier == "breathing" {
-                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .blue)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfBackgroundData)
                 } else{
-                    print("error")
+                    continue
                 }
             }
         }else {
