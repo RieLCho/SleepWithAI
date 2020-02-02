@@ -29,8 +29,8 @@
 		E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */; };
 		E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84D3D1A23DADB6300537CFB /* DataTab.storyboard */; };
 		E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A902423E0912F00E42621 /* MainModalViewController.swift */; };
-		E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */; };
 		E87A903023E2B8CF00E42621 /* SleepSoundUnitDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */; };
+		E885755523E6EDB900FCA9CF /* SleepSoundClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E885755423E6EDB900FCA9CF /* SleepSoundClassification.mlmodel */; };
 		E8DF0CAF23DAB48A00D6FF0B /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */; };
 		E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */; };
 		FE406301BA65FD932B8B6349 /* Pods_UI_presentation_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282CC3627112373B6371E6E3 /* Pods_UI_presentation_1.framework */; };
@@ -64,8 +64,8 @@
 		E84D3D1823DACD9E00537CFB /* DataTabDescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabDescViewController.swift; sourceTree = "<group>"; };
 		E84D3D1A23DADB6300537CFB /* DataTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataTab.storyboard; sourceTree = "<group>"; };
 		E87A902423E0912F00E42621 /* MainModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModalViewController.swift; sourceTree = "<group>"; };
-		E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepSoundClassification.mlmodel; sourceTree = "<group>"; };
 		E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSoundUnitDB.swift; sourceTree = "<group>"; };
+		E885755423E6EDB900FCA9CF /* SleepSoundClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepSoundClassification.mlmodel; sourceTree = "<group>"; };
 		E8DF0CAD23DAB48A00D6FF0B /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E8DF0CAE23DAB48A00D6FF0B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,8 +116,8 @@
 				B52C953823E6BB4500B23B9C /* MoveOn.mp3 */,
 				B52C953623E6B38100B23B9C /* SundayBoomBap.mp3 */,
 				A6BBA51623E58453009A0C5A /* SundayBeatEdited.wav */,
+				E885755423E6EDB900FCA9CF /* SleepSoundClassification.mlmodel */,
 				A60238E723DDC54A00A9B854 /* API */,
-				E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */,
 				E840218523E5277B004A505B /* Model */,
 				E8DF0CAC23DAB48A00D6FF0B /* Cells */,
 				A6C4233223CF0FE90083F73C /* Main.storyboard */,
@@ -308,11 +308,11 @@
 				E840218923E527BC004A505B /* DayData.swift in Sources */,
 				A6C4232F23CF0FE90083F73C /* SceneDelegate.swift in Sources */,
 				E84D3D1723DAB9D000537CFB /* ViewController.swift in Sources */,
+				E885755523E6EDB900FCA9CF /* SleepSoundClassification.mlmodel in Sources */,
 				B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */,
 				E840218423E5250A004A505B /* API.swift in Sources */,
 				B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */,
 				E8DF0CB023DAB48A00D6FF0B /* CustomCell.swift in Sources */,
-				E87A902A23E0946100E42621 /* SleepSoundClassification.mlmodel in Sources */,
 				A6A7046123D691450027504B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
