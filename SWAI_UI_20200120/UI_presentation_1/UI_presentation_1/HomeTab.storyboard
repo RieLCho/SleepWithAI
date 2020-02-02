@@ -170,7 +170,7 @@
                                 </state>
                                 <connections>
                                     <action selector="IDCModeSleepNowButtonClicked" destination="c6q-uo-Vbg" eventType="touchUpInside" id="fgx-o6-DgE"/>
-                                    <segue destination="0dz-L7-7vV" kind="show" id="GfM-36-d0f"/>
+                                    <segue destination="0dz-L7-7vV" kind="show" identifier="iDontCareMode" id="GfM-36-d0f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-hQ-izX">
@@ -384,6 +384,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lix-s4-M6u"/>
+        <segue reference="GfM-36-d0f"/>
     </inferredMetricsTieBreakers>
 </document>
