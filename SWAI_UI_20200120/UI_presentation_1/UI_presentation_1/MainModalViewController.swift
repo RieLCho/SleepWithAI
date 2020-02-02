@@ -46,7 +46,6 @@ class MainModalViewController: UIViewController {
 
         return view
     }()
-    
     let placeholderText:UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +60,7 @@ class MainModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        let realm = try! Realm()
+//        let rearightnow    Date    lm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL)
 //        var DB = SleepSoundUnitDB()
         //print(sleepTime)
@@ -70,13 +69,13 @@ class MainModalViewController: UIViewController {
         let today = DateFormatter()
         today.dateFormat = "yyyy-MM-dd"
         currentTime = today.string(from: rightnow)
-        
+        print(sleepTime)
         resultsObserver.delegate = self
         inputFormat = audioEngine.inputNode.inputFormat(forBus: 0)
         analyzer = SNAudioStreamAnalyzer(format: inputFormat)
         buildUI()
     }
-    
+//
     override func viewDidAppear(_ animated: Bool) {
         startAudioEngine()
     }
@@ -111,7 +110,6 @@ class MainModalViewController: UIViewController {
     {
         self.view.addSubview(placeholderText)
         self.view.addSubview(transcribedText)
-        
         NSLayoutConstraint.activate(
             [transcribedText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 400),
              transcribedText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -120,7 +118,6 @@ class MainModalViewController: UIViewController {
              transcribedText.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ]
         )
-        
         NSLayoutConstraint.activate(
             [placeholderText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
              placeholderText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -140,12 +137,10 @@ class MainModalViewController: UIViewController {
         }
         
         audioEngine.inputNode.installTap(onBus: 0, bufferSize: 8000, format: inputFormat) { buffer, time in
-            
             self.analysisQueue.async {
                 self.analyzer.analyze(buffer, atAudioFramePosition: time.sampleTime)
             }
         }
-        
         do{
             try audioEngine.start()
         }catch( _){
@@ -173,17 +168,26 @@ extension MainModalViewController: SoundClassifierDelegate {
         //print(self.recoded.count)
             print(self.recoded)
             if identifier == "sleeptalking", var wake = self.toWakeUp {
-                wake = wake + Double(sleepTime!)
+                wake = wake + Double(sleepTime!) - 30*60
                 print(wake)
                 print(wake.timeIntervalSince1970)
+                print(Date().timeIntervalSince1970)
                 if wake.timeIntervalSince1970 < Date().timeIntervalSince1970 {
                     audioEngine.inputNode.removeTap(onBus: 0)
                     self.audioEngine.stop()
-                    //오디오 재생
                     if let path = Bundle.main.url(forResource: "SundayBeatEdited", withExtension: "wav") {
                         self.audioPlayer = try? AVAudioPlayer(contentsOf: path)
                         self.audioPlayer?.play()
                     }
+                    //알림창
+                    //UIAlertController(title:"
+                    let alert = UIAlertController(title: "Alarm", message: "Click 'OK' Button", preferredStyle: UIAlertController.Style.alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                        self.audioPlayer?.stop()
+                    }
+                    //alert.addAction(defaultAction)
+                    present(alert, animated: false, completion: nil)
+                    //오디오 재생
                 }
             }
             DispatchQueue.main.async {

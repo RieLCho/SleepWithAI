@@ -47,10 +47,11 @@ class CustomCell: UITableViewCell {
         startingX += Int(realWidth)
     }
     func buildUI(data: [SleepSoundUnit]){
-        var allSecond = Int()
+        var allSecond = 0.0
         for i in 0..<data.count {
             allSecond += (data[i].endedSecond - data[i].startedSecond)
         }
+        
         for i in 0..<data.count {
             if data[i].identifier == "snoring" {
                 creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .red)
