@@ -242,6 +242,5 @@ class ResultsObserver: NSObject, SNResultsObserving {
         if confidence > 60 {
             delegate?.displayPredictionResult(identifier: classification.identifier, confidence: confidence, seconds: result.timeRange.end.seconds, date: date)
         }
-        
     }
 }
