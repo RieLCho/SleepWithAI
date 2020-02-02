@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
         
         let temp = isWakeUpTimeSameDay(inputTime: setTimeAsSecond, startTime: currentTimeAsSecond)
         sleepTime = temp
-        performSegue(withIdentifier: "sleepingMode", sender: sleepTime)
+        //performSegue(withIdentifier: "sleepingMode", sender: sleepTime)
         
 //        func cycleDuringSleep(wakeUpTime:Int)->(Int) { //수면시간 취침싸이클 조절
 //            if (wakeUpTime < allowedTimeError){

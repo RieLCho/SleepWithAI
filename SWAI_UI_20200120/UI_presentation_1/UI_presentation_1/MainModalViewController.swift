@@ -127,6 +127,8 @@ class MainModalViewController: UIViewController {
         )
     }
     
+
+    
     private func startAudioEngine() {
         do {
             let request = try SNClassifySoundRequest(mlModel: soundClassifier.model)
@@ -168,10 +170,12 @@ extension MainModalViewController: SoundClassifierDelegate {
         //print(self.recoded.count)
             print(self.recoded)
             if identifier == "sleeptalking", var wake = self.toWakeUp {
+                print(sleepTime!)
                 wake = wake + Double(sleepTime!) - 30*60
                 print(wake)
                 print(wake.timeIntervalSince1970)
                 print(Date().timeIntervalSince1970)
+                print(Date().timeIntervalSince1970 - wake.timeIntervalSince1970)
                 if wake.timeIntervalSince1970 < Date().timeIntervalSince1970 {
                     audioEngine.inputNode.removeTap(onBus: 0)
                     self.audioEngine.stop()
@@ -180,13 +184,11 @@ extension MainModalViewController: SoundClassifierDelegate {
                         self.audioPlayer?.play()
                     }
                     //알림창
-                    //UIAlertController(title:"
                     let alert = UIAlertController(title: "Alarm", message: "Click 'OK' Button", preferredStyle: UIAlertController.Style.alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                        self.audioPlayer?.stop()
-                    }
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                     //alert.addAction(defaultAction)
-                    present(alert, animated: false, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
+
                     //오디오 재생
                 }
             }
