@@ -49,23 +49,22 @@ class IDontCareModeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ageTextField.text = UserDefaults.standard.string(forKey: "inputAge")
-        userAge = UserDefaults.standard.string(forKey: "inputAge")!
-//        if(userAge == ""){
-//            DispatchQueue.main.async {
-//            let alert = UIAlertController(title: "Set your Age", message: "Click 'OK' Button", preferredStyle: UIAlertController.Style.alert)
-//                let defaultAction = UIAlertAction(title: "OK", style: .destructive, handler: { (UIAlertAction) in
-//                    performSegue(withIdentifier: "SettingYourAge", sender: Any?.self)
-//                    performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-//                })
-//            alert.addAction(defaultAction)
-//            self.present(alert, animated: true)
-//            //오디오 재생
-//            }
-//        }
-//        else{
+        userAge = UserDefaults.standard.string(forKey: "inputAge") ?? "20"
+        if(userAge == "20"){
+            DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Set your Age", message: "You can set your age at Setting. \nWith your age, SWAI can recommend better sleep duration time.", preferredStyle: UIAlertController.Style.alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (UIAlertAction) in
+//                    performSegue(withIdentifier: "idctohome", sender: IDontCareModeViewController.self)
+//                }
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true)
+            }
+        }
+        else{
         sleepTime = IDCNotification(ageAsString: userAge)
         print(sleepTime)
-//        }
+        }
     }
     
     @IBOutlet weak var ageTextField: UITextField!
