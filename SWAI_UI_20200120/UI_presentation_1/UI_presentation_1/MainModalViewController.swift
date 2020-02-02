@@ -208,7 +208,7 @@ extension MainModalViewController: SoundClassifierDelegate {
 //                    self.audioPlayer = try? AVAudioPlayer(contentsOf: path)
 //                        self.audioPlayer?.numberOfLoops = -1
 //                        self.audioPlayer?.play()
-                    }
+//                    }
                     //알림창
                     DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Alarm", message: "Click 'OK' Button", preferredStyle: UIAlertController.Style.alert)
@@ -226,6 +226,7 @@ extension MainModalViewController: SoundClassifierDelegate {
             }
         }
     }
+}
 
 
 class ResultsObserver: NSObject, SNResultsObserving {
