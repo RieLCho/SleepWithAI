@@ -7,7 +7,7 @@ You can see more detailed function at [SWAI Marketing Website](https://projectin
 
 ### Installation
 
-You can install on iOS devices (iOS 13+) at [Appstore](https://apps.apple.com/kr/app/). 
+You can install on iOS devices. (iOS 13+)
 
 ### How this Application Wake User
 
