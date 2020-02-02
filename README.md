@@ -47,3 +47,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * sleepyti.me - Quite different from our project, but initial idea was from this website.
 * [Charts](https://github.com/danielgindi/Charts) - Used Cocoapod Framework for showing sleeping sound data to user.
+* [Sleep Foundation](https://www.sleepfoundation.org/press-release/national-sleep-foundation-recommends-new-sleep-times)
