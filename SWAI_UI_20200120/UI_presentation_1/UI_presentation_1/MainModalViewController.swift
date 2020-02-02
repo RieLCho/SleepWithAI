@@ -42,7 +42,7 @@ class MainModalViewController: UIViewController {
         view.textAlignment = .center
         view.numberOfLines = 0
         view.font = UIFont(name: "Chalkduster", size: 21)
-        view.textColor = .white
+        view.textColor = .yellow
 
         return view
     }()
@@ -110,7 +110,7 @@ class MainModalViewController: UIViewController {
         self.view.addSubview(placeholderText)
         self.view.addSubview(transcribedText)
         NSLayoutConstraint.activate(
-            [transcribedText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 400),
+            [transcribedText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 380),
              transcribedText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
              transcribedText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
              transcribedText.heightAnchor.constraint(equalToConstant: 100),
