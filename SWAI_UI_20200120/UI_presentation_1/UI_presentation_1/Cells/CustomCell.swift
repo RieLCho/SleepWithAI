@@ -39,7 +39,7 @@ class CustomCell: UITableViewCell {
     var startingX = 16
     
     func creatingData(widthOfData: Double, dataViewColor: UIColor? ){
-        let realWidth = widthOfData * 10
+        let realWidth = widthOfData
         let dataView: UIView = UIView(frame: CGRect(x: startingX, y: 60, width: Int(realWidth), height: 40))
         dataView.tag = 99
         dataView.backgroundColor = dataViewColor
@@ -51,22 +51,23 @@ class CustomCell: UITableViewCell {
         for i in 0..<data.count {
             allSecond += (data[i].endedSecond - data[i].startedSecond)
         }
-        
-        for i in 0..<data.count {
-            if data[i].identifier == "snoring" {
-                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .red)
-                
-            } else if data[i].identifier == "sleeptalking" {
-                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .orange)
-            } else if data[i].identifier == "tortion" {
-                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .yellow)
-            } else if data[i].identifier == "breathing" {
-                creatingData(widthOfData: 35 * ((data[i].endedSecond - data[i].startedSecond) / allSecond) , dataViewColor: .blue)
-            } else{
-                print("error")
+        if allSecond != 0.0 {
+            for i in 0..<data.count {
+                if data[i].identifier == "snoring" {
+                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .red)
+                } else if data[i].identifier == "sleeptalking" {
+                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .orange)
+                } else if data[i].identifier == "tortion" {
+                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .yellow)
+                } else if data[i].identifier == "breathing" {
+                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .blue)
+                } else{
+                    print("error")
+                }
             }
         }
-        creatingData(widthOfData: 0.1, dataViewColor: .black)
+
+        creatingData(widthOfData: 1, dataViewColor: .black)
         //끝 구별하려고 검은색 넣음
         
         startingX = 16

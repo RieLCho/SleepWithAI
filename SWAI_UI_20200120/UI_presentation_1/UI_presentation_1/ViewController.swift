@@ -24,17 +24,39 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    private var dataSourceForWholeData: [DayData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let nibName = UINib(nibName: "CustomCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "customCell")
-        makeWholeData()
-        customizePieChart(dataPoints: wholeData.identifier, values: secondsOfIdentifier)
+        //makeWholeData()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.dataSource = API.shared.dayData(dayRange: 10)
+        self.dataSourceForWholeData = API.shared.dayData(dayRange: 10)
+        
+        for i in 0..<self.dataSourceForWholeData.count {
+            for j in 0..<self.dataSourceForWholeData[i].sleepData.count {
+                if self.dataSourceForWholeData[i].sleepData[j].identifier == "snoring" {
+                    self.secondsOfIdentifier[0] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
+                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "sleeptalking" {
+                    self.secondsOfIdentifier[1] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
+                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "tortion" {
+                    self.secondsOfIdentifier[2] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
+                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "background" {
+                    self.secondsOfIdentifier[3] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
+                }else {
+                    print("error")
+                }
+            }
+        }
+        
+        customizePieChart(dataPoints: wholeData.identifier, values: secondsOfIdentifier)
+
     }
     
     
@@ -51,8 +73,7 @@ class ViewController: UIViewController {
     }
     
     func makeWholeData() {
-        let allDayData = self.dataSource
-        //print(self.dataSource.count)
+        //print("dataSourceForWholeData : \(self.dataSourceForWholeData.count)")
         
         /*for j in 0..<allDayData.count {
             for i in 0..<allDayData[j].sleepData.count {
