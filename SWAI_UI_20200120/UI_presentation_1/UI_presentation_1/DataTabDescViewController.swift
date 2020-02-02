@@ -27,8 +27,8 @@ class DataTabDescViewController: UIViewController {
     
     func printTime (seconds: Double) -> String {
         let hour = Int(seconds / 3600)
-        let minute = Int(seconds / 60) - hour
-        let second = Int(seconds) - hour - minute
+        let minute = Int(seconds / 60) - hour * 60
+        let second = Int(seconds) - hour * 3600 - minute * 60
         let printString: String = "\(hour)h \(minute)m \(second)s"
         return printString
     }
@@ -68,7 +68,7 @@ class DataTabDescViewController: UIViewController {
             for i in 0..<data.count {
                 if data[i].identifier == "snoring" {
                     creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSnoringData)
-                    self.pieChartData[1] += (data[i].endedSecond - data[i].startedSecond)
+                    self.pieChartData[0] += (data[i].endedSecond - data[i].startedSecond)
                     self.snoringData += (data[i].endedSecond - data[i].startedSecond)
                     
                 } else if data[i].identifier == "sleeptalking" {
