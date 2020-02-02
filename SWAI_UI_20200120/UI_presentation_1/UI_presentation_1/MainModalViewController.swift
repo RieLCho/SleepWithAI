@@ -168,7 +168,7 @@ extension MainModalViewController: SoundClassifierDelegate {
             }
         //print(self.recoded.count)
             print(self.recoded)
-            if identifier == "sleeptalking", var wake = self.toWakeUp {
+            if identifier != "background", var wake = self.toWakeUp {
                 print(sleepTime!)
                 wake = wake + Double(sleepTime!) - 30*60
                 print(wake)
