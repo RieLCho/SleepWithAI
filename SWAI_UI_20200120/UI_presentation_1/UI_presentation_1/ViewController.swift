@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             }
         }
         
-        customizePieChart(dataPoints: wholeData.identifier, values: secondsOfIdentifier)
+        customizePieChart(dataPoints: identifier, values: secondsOfIdentifier)
 
     }
     
@@ -129,6 +129,18 @@ class ViewController: UIViewController {
         // 4. Assign it to the chart’s data
         wholeDataChartView.data = pieChartData
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "datatabsegue" {
+            let data = sender as? DayData
+            if data != nil {
+                let detailController = segue.destination as?  DataTabDescViewController
+                if detailController != nil {
+                    detailController!.dataDetail = data
+                }
+            }
+        }
+    }
 
 }
     
@@ -153,7 +165,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         segueIndex=indexPath.row
-        performSegue(withIdentifier: "datatabsegue", sender: self)
+        performSegue(withIdentifier: "datatabsegue", sender: self.dataSource[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat {

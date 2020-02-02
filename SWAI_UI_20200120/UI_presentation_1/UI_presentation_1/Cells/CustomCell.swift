@@ -32,13 +32,12 @@ class CustomCell: UITableViewCell {
     }
     func custominit(text: String, accessoryText:String){
         self.titleLabel.text = text
-        self.titleLabel.textColor = UIColor.white
-        //self.contentView.backgroundColor = UIColor.darkGray
+        self.titleLabel.textColor = UIColor.black        //self.contentView.backgroundColor = UIColor.darkGray
     }
     
     var startingX = 16
     
-    func creatingData(widthOfData: Double, dataViewColor: UIColor? ){
+    func creatingData(widthOfData: CGFloat, dataViewColor: UIColor? ){
         let realWidth = widthOfData
         let dataView: UIView = UIView(frame: CGRect(x: startingX, y: 60, width: Int(realWidth), height: 40))
         dataView.tag = 99
@@ -54,21 +53,20 @@ class CustomCell: UITableViewCell {
         if allSecond != 0.0 {
             for i in 0..<data.count {
                 if data[i].identifier == "snoring" {
-                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .red)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .red)
                 } else if data[i].identifier == "sleeptalking" {
-                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .orange)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .orange)
                 } else if data[i].identifier == "tortion" {
-                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .yellow)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .yellow)
                 } else if data[i].identifier == "breathing" {
-                    creatingData(widthOfData: (350 / allSecond) * (data[i].endedSecond - data[i].startedSecond) , dataViewColor: .blue)
+                    creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: .blue)
                 } else{
                     print("error")
                 }
             }
+        }else {
+            creatingData(widthOfData: 1, dataViewColor: .black)
         }
-
-        creatingData(widthOfData: 1, dataViewColor: .black)
-        //끝 구별하려고 검은색 넣음
         
         startingX = 16
         

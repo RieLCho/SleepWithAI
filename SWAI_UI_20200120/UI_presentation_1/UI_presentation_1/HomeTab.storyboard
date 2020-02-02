@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="iJ9-HM-8QF">
-                                <rect key="frame" x="-23" y="-11" width="504.00000000000023" height="730"/>
+                                <rect key="frame" x="-23" y="-11" width="504" height="730"/>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-RE-Cda">
                                 <rect key="frame" x="27.5" y="244.5" width="320" height="138"/>
@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="ouy-l2-YtH">
-                                <rect key="frame" x="-21" y="-19" width="519.00000000000023" height="749"/>
+                                <rect key="frame" x="-21" y="-19" width="519" height="749"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*careful*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Ky-ncm">
                                 <rect key="frame" x="12.5" y="154.5" width="350" height="27"/>

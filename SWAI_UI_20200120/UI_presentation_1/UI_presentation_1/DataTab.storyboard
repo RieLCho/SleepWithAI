@@ -111,44 +111,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImZ-gu-YWU">
-                                <rect key="frame" x="16" y="101" width="344" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-K3-ZC9">
-                                <rect key="frame" x="16" y="171" width="343" height="218"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="ciE-Uu-JZG"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-ca-yWV">
+                                <rect key="frame" x="0.0" y="20" width="830" height="925"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-p4-mS6">
-                                <rect key="frame" x="16" y="433" width="343" height="210"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImZ-gu-YWU">
+                                <rect key="frame" x="159.5" y="64" width="56.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-WY-0YN">
+                                <rect key="frame" x="10" y="188" width="355" height="175"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-FP-4ZV" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="gTR-Db-YH3"/>
+                                            <constraint firstAttribute="width" constant="175" id="nHJ-lv-MYo"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="GRO-DM-7WW">
+                                        <rect key="frame" x="183" y="0.0" width="172" height="175"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biO-U6-CdK">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-vf-1UA">
+                                                <rect key="frame" x="0.0" y="31.5" width="172" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RU-bj-hwo">
+                                                <rect key="frame" x="0.0" y="62" width="172" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGI-TP-h05">
+                                                <rect key="frame" x="0.0" y="92.5" width="172" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep sleep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quu-a0-mPD">
+                                                <rect key="frame" x="0.0" y="123" width="172" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" red="0.94429987670000004" green="0.97756952050000001" blue="0.9235896468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVt-8v-Uvw">
+                                                <rect key="frame" x="0.0" y="153.5" width="172" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="quu-a0-mPD" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="2Uy-T7-02A"/>
+                                            <constraint firstItem="aZM-vf-1UA" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="Uva-PN-KiK"/>
+                                            <constraint firstItem="PVt-8v-Uvw" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="glW-sw-Fau"/>
+                                            <constraint firstItem="7RU-bj-hwo" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="vLX-yz-xQE"/>
+                                            <constraint firstItem="mGI-TP-h05" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="wCC-jS-9xb"/>
+                                            <constraint firstItem="biO-U6-CdK" firstAttribute="centerX" secondItem="GRO-DM-7WW" secondAttribute="centerX" id="wXF-vD-Ec8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="yT5-DK-Mr0"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="bottom" secondItem="gn3-p4-mS6" secondAttribute="bottom" constant="24" id="CNW-47-86Z"/>
-                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="gn3-p4-mS6" secondAttribute="trailing" constant="16" id="M1Q-9e-q71"/>
-                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="leading" secondItem="gn3-p4-mS6" secondAttribute="leading" id="NSp-24-l4f"/>
-                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="trailing" secondItem="gn3-p4-mS6" secondAttribute="trailing" id="cMY-kp-aY3"/>
-                            <constraint firstItem="gn3-p4-mS6" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="16" id="duj-Lk-Oaj"/>
-                            <constraint firstItem="gn3-p4-mS6" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="er0-qp-Ldm"/>
-                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="top" secondItem="XMA-88-dX8" secondAttribute="top" constant="171" id="naf-wK-ys2"/>
-                            <constraint firstItem="ImZ-gu-YWU" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="rlU-MD-1h3"/>
-                            <constraint firstItem="3PJ-K3-ZC9" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="22" id="wRs-B1-zjJ"/>
+                            <constraint firstItem="i0N-WY-0YN" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="10" id="H52-IL-WPg"/>
+                            <constraint firstItem="ImZ-gu-YWU" firstAttribute="top" secondItem="nHS-kL-2Uh" secondAttribute="top" constant="20" id="NOY-jn-4hy"/>
+                            <constraint firstItem="i0N-WY-0YN" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="100" id="eRO-zH-i4e"/>
+                            <constraint firstItem="ImZ-gu-YWU" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="tzQ-FG-QyE"/>
+                            <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="i0N-WY-0YN" secondAttribute="trailing" constant="10" id="w6R-jv-bFP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nHS-kL-2Uh"/>
                     </view>
                     <navigationItem key="navigationItem" id="YKT-QN-K6f"/>
                     <connections>
-                        <outlet property="descLabel" destination="gn3-p4-mS6" id="GaC-iC-pRW"/>
-                        <outlet property="myImageView" destination="3PJ-K3-ZC9" id="ON5-oY-oNO"/>
+                        <outlet property="dataDetailPieChartView" destination="EqC-FP-4ZV" id="aBN-Xl-iA1"/>
+                        <outlet property="deepSleepLabel" destination="PVt-8v-Uvw" id="3k5-2g-tV0"/>
+                        <outlet property="lightSleepLabel" destination="mGI-TP-h05" id="jlb-fW-c2H"/>
                         <outlet property="titleLabel" destination="ImZ-gu-YWU" id="7d6-wM-R3l"/>
+                        <outlet property="wholeSleepLabel" destination="aZM-vf-1UA" id="8dj-S6-p40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7j3-3X-xsV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
