@@ -20,4 +20,4 @@ let colorOfBackgroundData = UIColor(red: 255/255, green: 212/255, blue: 121/255,
 let colorOfLightSleepData = UIColor(displayP3Red: 114/255, green: 167/255, blue: 255/255, alpha: 1)
 let colorOfDeepSleepData = UIColor(displayP3Red: 114/255, green: 17/255, blue: 255/255, alpha: 1)
 
-let identifier = ["snoring","sleeptalking","breaking"]
+let identifier = ["Snoring","Sleep Talking","Deep sleep"]

@@ -76,7 +76,7 @@ class DataTabDescViewController: UIViewController {
                     self.pieChartData[0] += (data[i].endedSecond - data[i].startedSecond)
                     self.sleeptalkingData += (data[i].endedSecond - data[i].startedSecond)
                     
-                } else if data[i].identifier == "breathing" {
+                } else if data[i].identifier == "background" {
                     creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfBackgroundData)
                     self.pieChartData[1] += (data[i].endedSecond - data[i].startedSecond)
                 

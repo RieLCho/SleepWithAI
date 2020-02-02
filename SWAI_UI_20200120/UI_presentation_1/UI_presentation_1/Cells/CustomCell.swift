@@ -56,7 +56,7 @@ class CustomCell: UITableViewCell {
                     creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSnoringData)
                 } else if data[i].identifier == "sleeptalking" {
                     creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfSleeptalkingData)
-                } else if data[i].identifier == "breathing" {
+                } else if data[i].identifier == "background" {
                     creatingData(widthOfData: CGFloat((350 / allSecond) * (data[i].endedSecond - data[i].startedSecond)) , dataViewColor: colorOfBackgroundData)
                 } else{
                     continue

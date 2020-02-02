@@ -45,10 +45,10 @@ class ViewController: UIViewController {
                     self.secondsOfIdentifier[0] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "sleeptalking" {
                     self.secondsOfIdentifier[1] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
-                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "breathing" {
+                }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "background" {
                     self.secondsOfIdentifier[3] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else {
-                    print("error")
+                    continue
                 }
             }
         }
