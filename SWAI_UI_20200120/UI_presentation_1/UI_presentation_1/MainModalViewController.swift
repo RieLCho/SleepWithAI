@@ -65,7 +65,6 @@ class MainModalViewController: UIViewController {
 //        var DB = SleepSoundUnitDB()
         //print(sleepTime)
         let rightnow = Date()
-        
         let today = DateFormatter()
         today.dateFormat = "yyyy-MM-dd"
         currentTime = today.string(from: rightnow)
@@ -146,7 +145,7 @@ class MainModalViewController: UIViewController {
         do{
             try audioEngine.start()
         }catch( _){
-            print("error in starting the Audio Engin")
+            print("error in starting the Audio Engine")
         }
     }
 }
@@ -179,9 +178,36 @@ extension MainModalViewController: SoundClassifierDelegate {
                 if wake.timeIntervalSince1970 < Date().timeIntervalSince1970 {
                     audioEngine.inputNode.removeTap(onBus: 0)
                     self.audioEngine.stop()
-                    if let path = Bundle.main.url(forResource: "SundayBeatEdited", withExtension: "wav") {
-                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path)
+                    var songNumber:Int = UserDefaults.standard.integer(forKey: "song")
+                    print(songNumber)
+                    if songNumber == 1{
+                        var path = Bundle.main.url(forResource: "SundayBoomBap", withExtension: "mp3")
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path!)
+                        self.audioPlayer?.numberOfLoops = -1
                         self.audioPlayer?.play()
+                    }
+                    else if songNumber == 2{
+                        var path = Bundle.main.url(forResource: "FadingAway", withExtension: "mp3")
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path!)
+                        self.audioPlayer?.numberOfLoops = -1
+                        self.audioPlayer?.play()
+                    }
+                    else if songNumber == 3{
+                        var path = Bundle.main.url(forResource: "MoveOn", withExtension: "mp3")
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path!)
+                        self.audioPlayer?.numberOfLoops = -1
+                        self.audioPlayer?.play()
+                    }
+                    else{
+                        var path = Bundle.main.url(forResource: "SundayBoomBap", withExtension: "mp3")
+                        self.audioPlayer = try? AVAudioPlayer(contentsOf: path!)
+                        self.audioPlayer?.numberOfLoops = -1
+                        self.audioPlayer?.play()
+                    }
+//                    if var path = Bundle.main.url(forResource: "SundayBoomBap", withExtension: "mp3") {
+//                    self.audioPlayer = try? AVAudioPlayer(contentsOf: path)
+//                        self.audioPlayer?.numberOfLoops = -1
+//                        self.audioPlayer?.play()
                     }
                     //알림창
                     DispatchQueue.main.async {
@@ -190,9 +216,7 @@ extension MainModalViewController: SoundClassifierDelegate {
                             self.audioPlayer?.stop()
                         })
                     alert.addAction(defaultAction)
-                    self.present(alert, animated: true, completion: nil)
-                    
-
+                    self.present(alert, animated: true)
                     //오디오 재생
                     }
                 }
@@ -202,7 +226,7 @@ extension MainModalViewController: SoundClassifierDelegate {
             }
         }
     }
-}
+
 
 class ResultsObserver: NSObject, SNResultsObserving {
     var delegate: SoundClassifierDelegate?

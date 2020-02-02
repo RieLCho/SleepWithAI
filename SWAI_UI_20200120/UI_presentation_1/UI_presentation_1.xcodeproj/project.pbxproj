@@ -16,6 +16,10 @@
 		A6C4233423CF0FE90083F73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233223CF0FE90083F73C /* Main.storyboard */; };
 		A6C4233623CF0FEA0083F73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233523CF0FEA0083F73C /* Assets.xcassets */; };
 		A6C4233923CF0FEA0083F73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4233723CF0FEA0083F73C /* LaunchScreen.storyboard */; };
+		B52C953723E6B38100B23B9C /* SundayBoomBap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B52C953623E6B38100B23B9C /* SundayBoomBap.mp3 */; };
+		B52C953923E6BB4500B23B9C /* MoveOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B52C953823E6BB4500B23B9C /* MoveOn.mp3 */; };
+		B52C953B23E6BB5000B23B9C /* FadingAway.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B52C953A23E6BB5000B23B9C /* FadingAway.mp3 */; };
+		B52C953D23E6BBED00B23B9C /* ChooseSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C953C23E6BBED00B23B9C /* ChooseSongViewController.swift */; };
 		B5B13DED23E40703001B0482 /* IDontCareModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */; };
 		B5E858FC23DF3AC1003C5818 /* AgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */; };
 		E840218423E5250A004A505B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840218323E5250A004A505B /* API.swift */; };
@@ -47,6 +51,10 @@
 		A6C4233823CF0FEA0083F73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C4233A23CF0FEA0083F73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF09F5FA595A4AB309337F6 /* Pods-UI_presentation_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI_presentation_1.release.xcconfig"; path = "Target Support Files/Pods-UI_presentation_1/Pods-UI_presentation_1.release.xcconfig"; sourceTree = "<group>"; };
+		B52C953623E6B38100B23B9C /* SundayBoomBap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SundayBoomBap.mp3; path = ../../../resource/SundayBoomBap.mp3; sourceTree = "<group>"; };
+		B52C953823E6BB4500B23B9C /* MoveOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MoveOn.mp3; path = ../../../resource/MoveOn.mp3; sourceTree = "<group>"; };
+		B52C953A23E6BB5000B23B9C /* FadingAway.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FadingAway.mp3; path = ../../../resource/FadingAway.mp3; sourceTree = "<group>"; };
+		B52C953C23E6BBED00B23B9C /* ChooseSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSongViewController.swift; sourceTree = "<group>"; };
 		B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDontCareModeViewController.swift; sourceTree = "<group>"; };
 		B5E858FB23DF3AC1003C5818 /* AgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeViewController.swift; sourceTree = "<group>"; };
 		E840218323E5250A004A505B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -104,6 +112,9 @@
 		A6C4232B23CF0FE90083F73C /* UI_presentation_1 */ = {
 			isa = PBXGroup;
 			children = (
+				B52C953A23E6BB5000B23B9C /* FadingAway.mp3 */,
+				B52C953823E6BB4500B23B9C /* MoveOn.mp3 */,
+				B52C953623E6B38100B23B9C /* SundayBoomBap.mp3 */,
 				A6BBA51623E58453009A0C5A /* SundayBeatEdited.wav */,
 				A60238E723DDC54A00A9B854 /* API */,
 				E87A902923E0946100E42621 /* SleepSoundClassification.mlmodel */,
@@ -125,6 +136,7 @@
 				E87A902423E0912F00E42621 /* MainModalViewController.swift */,
 				E87A902F23E2B8CE00E42621 /* SleepSoundUnitDB.swift */,
 				B5B13DEC23E40703001B0482 /* IDontCareModeViewController.swift */,
+				B52C953C23E6BBED00B23B9C /* ChooseSongViewController.swift */,
 			);
 			path = UI_presentation_1;
 			sourceTree = "<group>";
@@ -226,12 +238,15 @@
 			files = (
 				A6C4233923CF0FEA0083F73C /* LaunchScreen.storyboard in Resources */,
 				E84D3D1B23DADB6300537CFB /* DataTab.storyboard in Resources */,
+				B52C953B23E6BB5000B23B9C /* FadingAway.mp3 in Resources */,
+				B52C953723E6B38100B23B9C /* SundayBoomBap.mp3 in Resources */,
 				A6C4233623CF0FEA0083F73C /* Assets.xcassets in Resources */,
 				E8DF0CAF23DAB48A00D6FF0B /* CustomCell.xib in Resources */,
 				A636D3BA23D5B1860040FC04 /* SettingTab.storyboard in Resources */,
 				A6C4233423CF0FE90083F73C /* Main.storyboard in Resources */,
 				A636D3BC23D5B2740040FC04 /* HomeTab.storyboard in Resources */,
 				A6BBA51723E58453009A0C5A /* SundayBeatEdited.wav in Resources */,
+				B52C953923E6BB4500B23B9C /* MoveOn.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +303,7 @@
 				E840218723E527B0004A505B /* SleepSoundUnit.swift in Sources */,
 				E87A903023E2B8CF00E42621 /* SleepSoundUnitDB.swift in Sources */,
 				E87A902523E0912F00E42621 /* MainModalViewController.swift in Sources */,
+				B52C953D23E6BBED00B23B9C /* ChooseSongViewController.swift in Sources */,
 				E84D3D1923DACD9E00537CFB /* DataTabDescViewController.swift in Sources */,
 				E840218923E527BC004A505B /* DayData.swift in Sources */,
 				A6C4232F23CF0FE90083F73C /* SceneDelegate.swift in Sources */,
