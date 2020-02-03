@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="QJz-VO-0ce">
-                                <rect key="frame" x="0.0" y="-150" width="543" height="979"/>
+                                <rect key="frame" x="0.0" y="-70" width="375" height="737"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tat-6q-gEz">
                                 <rect key="frame" x="31" y="93" width="313.5" height="192"/>
@@ -157,13 +157,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="B3v-8w-LSt" firstAttribute="centerX" secondItem="KZf-Ke-yd6" secondAttribute="centerX" id="9qI-za-uf9"/>
-                            <constraint firstAttribute="bottom" secondItem="QJz-VO-0ce" secondAttribute="bottom" constant="-162" id="D5q-au-6Wa"/>
-                            <constraint firstItem="QJz-VO-0ce" firstAttribute="top" secondItem="KZf-Ke-yd6" secondAttribute="top" constant="-150" id="XBz-MO-gQe"/>
+                            <constraint firstAttribute="bottom" secondItem="QJz-VO-0ce" secondAttribute="bottom" id="D5q-au-6Wa"/>
+                            <constraint firstItem="QJz-VO-0ce" firstAttribute="top" secondItem="KZf-Ke-yd6" secondAttribute="top" constant="-70" id="XBz-MO-gQe"/>
                             <constraint firstItem="QKd-Dq-Ett" firstAttribute="bottom" secondItem="B3v-8w-LSt" secondAttribute="bottom" constant="72.5" id="Xc2-zh-LTh"/>
                             <constraint firstItem="tat-6q-gEz" firstAttribute="centerX" secondItem="KZf-Ke-yd6" secondAttribute="centerX" id="i5a-Pz-dJy"/>
                             <constraint firstItem="QJz-VO-0ce" firstAttribute="leading" secondItem="KZf-Ke-yd6" secondAttribute="leading" id="j6h-mH-cf4"/>
                             <constraint firstItem="tat-6q-gEz" firstAttribute="top" secondItem="QKd-Dq-Ett" secondAttribute="top" constant="49" id="obe-So-VLt"/>
-                            <constraint firstAttribute="trailing" secondItem="QJz-VO-0ce" secondAttribute="trailing" constant="-168" id="uIj-VO-NLc"/>
+                            <constraint firstAttribute="trailing" secondItem="QJz-VO-0ce" secondAttribute="trailing" id="uIj-VO-NLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QKd-Dq-Ett"/>
                     </view>
@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-iO-vnb">
-                                <rect key="frame" x="0.0" y="-150" width="543" height="979"/>
+                                <rect key="frame" x="0.0" y="-70" width="375" height="737"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your age?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLW-Bg-Upn">
                                 <rect key="frame" x="29.5" y="157" width="316.5" height="43"/>
@@ -209,10 +209,10 @@
                         <constraints>
                             <constraint firstItem="o35-LS-gNb" firstAttribute="centerY" secondItem="Sls-ut-r0x" secondAttribute="centerY" constant="-70" id="FV7-F0-qey"/>
                             <constraint firstItem="XGT-yb-pzE" firstAttribute="trailing" secondItem="WG3-Z2-jqd" secondAttribute="trailing" constant="16" id="GdQ-d9-uxE"/>
-                            <constraint firstItem="dPc-iO-vnb" firstAttribute="top" secondItem="Sls-ut-r0x" secondAttribute="top" constant="-150" id="OkC-aP-hSW"/>
-                            <constraint firstAttribute="trailing" secondItem="dPc-iO-vnb" secondAttribute="trailing" constant="-168" id="OoK-el-lIl"/>
+                            <constraint firstItem="dPc-iO-vnb" firstAttribute="top" secondItem="Sls-ut-r0x" secondAttribute="top" constant="-70" id="OkC-aP-hSW"/>
+                            <constraint firstAttribute="trailing" secondItem="dPc-iO-vnb" secondAttribute="trailing" id="OoK-el-lIl"/>
                             <constraint firstItem="dPc-iO-vnb" firstAttribute="leading" secondItem="Sls-ut-r0x" secondAttribute="leading" id="VIb-SL-yfS"/>
-                            <constraint firstAttribute="bottom" secondItem="dPc-iO-vnb" secondAttribute="bottom" constant="-162" id="ZN3-J9-MuD"/>
+                            <constraint firstAttribute="bottom" secondItem="dPc-iO-vnb" secondAttribute="bottom" id="ZN3-J9-MuD"/>
                             <constraint firstItem="o35-LS-gNb" firstAttribute="top" secondItem="kLW-Bg-Upn" secondAttribute="bottom" constant="46.5" id="brX-y8-T1x"/>
                             <constraint firstItem="o35-LS-gNb" firstAttribute="centerX" secondItem="Sls-ut-r0x" secondAttribute="centerX" id="eAv-Ui-Kdd"/>
                             <constraint firstItem="WG3-Z2-jqd" firstAttribute="top" secondItem="o35-LS-gNb" secondAttribute="bottom" constant="42.5" id="hCP-Y9-vxG"/>
@@ -266,7 +266,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="zL5-tz-6yL">
-                                <rect key="frame" x="0.0" y="-150" width="543" height="979"/>
+                                <rect key="frame" x="0.0" y="-70" width="375" height="737"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Niu-h2-Q8v">
                                 <rect key="frame" x="21.5" y="140" width="332.5" height="280.5"/>
@@ -284,7 +284,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="244" height="45"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
                                                 <state key="normal" title="1.Sunday Chillin">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="firstButtonClicked:" destination="vXV-8v-LaA" eventType="touchUpInside" id="3E7-vv-7Kb"/>
@@ -294,7 +294,7 @@
                                                 <rect key="frame" x="0.0" y="75" width="244" height="45"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
                                                 <state key="normal" title="2.Fading Away">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="secondButtonClicked:" destination="vXV-8v-LaA" eventType="touchUpInside" id="xXd-ws-Ox2"/>
@@ -304,7 +304,7 @@
                                                 <rect key="frame" x="0.0" y="150" width="244" height="45"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
                                                 <state key="normal" title="3.Move On">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="thirdButtonClicked:" destination="vXV-8v-LaA" eventType="touchUpInside" id="90r-2W-EOj"/>
@@ -318,11 +318,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Niu-h2-Q8v" firstAttribute="top" secondItem="gqR-Xm-ZKY" secondAttribute="top" constant="96" id="3jC-fL-Fqr"/>
-                            <constraint firstItem="zL5-tz-6yL" firstAttribute="top" secondItem="2N2-sP-2Zs" secondAttribute="top" constant="-150" id="QEB-Y7-LM4"/>
+                            <constraint firstItem="zL5-tz-6yL" firstAttribute="top" secondItem="2N2-sP-2Zs" secondAttribute="top" constant="-70" id="QEB-Y7-LM4"/>
                             <constraint firstItem="zL5-tz-6yL" firstAttribute="leading" secondItem="2N2-sP-2Zs" secondAttribute="leading" id="azz-QA-hDW"/>
                             <constraint firstItem="Niu-h2-Q8v" firstAttribute="centerX" secondItem="2N2-sP-2Zs" secondAttribute="centerX" id="bzu-h2-gxP"/>
-                            <constraint firstAttribute="bottom" secondItem="zL5-tz-6yL" secondAttribute="bottom" constant="-162" id="eDY-rh-t58"/>
-                            <constraint firstAttribute="trailing" secondItem="zL5-tz-6yL" secondAttribute="trailing" constant="-168" id="nN6-8W-wdA"/>
+                            <constraint firstAttribute="bottom" secondItem="zL5-tz-6yL" secondAttribute="bottom" id="eDY-rh-t58"/>
+                            <constraint firstAttribute="trailing" secondItem="zL5-tz-6yL" secondAttribute="trailing" id="nN6-8W-wdA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gqR-Xm-ZKY"/>
                     </view>
@@ -339,7 +339,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackGround_SleepingMode" width="830" height="925"/>
+        <image name="BackGround_SleepingMode" width="830" height="795"/>
         <image name="gear" catalog="system" width="64" height="58"/>
     </resources>
 </document>

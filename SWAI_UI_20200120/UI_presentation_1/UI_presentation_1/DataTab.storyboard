@@ -111,9 +111,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-ca-yWV">
-                                <rect key="frame" x="0.0" y="20" width="830" height="925"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-ca-yWV">
+                                <rect key="frame" x="0.0" y="-70" width="375" height="737"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImZ-gu-YWU">
                                 <rect key="frame" x="159.5" y="64" width="56.5" height="24"/>
@@ -281,14 +280,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="J0v-ca-yWV" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" id="8Z5-sc-GwA"/>
                             <constraint firstItem="yon-Aj-MPg" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="10" id="BXo-ud-ybO"/>
                             <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="yon-Aj-MPg" secondAttribute="trailing" constant="10" id="FAl-hK-LTP"/>
                             <constraint firstItem="i0N-WY-0YN" firstAttribute="leading" secondItem="nHS-kL-2Uh" secondAttribute="leading" constant="10" id="H52-IL-WPg"/>
                             <constraint firstItem="yon-Aj-MPg" firstAttribute="top" secondItem="i0N-WY-0YN" secondAttribute="bottom" constant="50" id="IS8-Bd-1A6"/>
                             <constraint firstItem="cLj-Ne-1XD" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="103" id="IxK-Pg-yZT"/>
                             <constraint firstItem="ImZ-gu-YWU" firstAttribute="top" secondItem="nHS-kL-2Uh" secondAttribute="top" constant="20" id="NOY-jn-4hy"/>
+                            <constraint firstAttribute="trailing" secondItem="J0v-ca-yWV" secondAttribute="trailing" id="a2D-dj-kcw"/>
                             <constraint firstItem="i0N-WY-0YN" firstAttribute="top" secondItem="ImZ-gu-YWU" secondAttribute="bottom" constant="150" id="eRO-zH-i4e"/>
                             <constraint firstItem="cLj-Ne-1XD" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="h35-ab-Rv3"/>
+                            <constraint firstItem="J0v-ca-yWV" firstAttribute="top" secondItem="XMA-88-dX8" secondAttribute="top" constant="-70" id="iwf-Zh-bW2"/>
+                            <constraint firstAttribute="bottom" secondItem="J0v-ca-yWV" secondAttribute="bottom" id="l9b-cr-dHW"/>
                             <constraint firstItem="ImZ-gu-YWU" firstAttribute="centerX" secondItem="XMA-88-dX8" secondAttribute="centerX" id="tzQ-FG-QyE"/>
                             <constraint firstItem="nHS-kL-2Uh" firstAttribute="trailing" secondItem="i0N-WY-0YN" secondAttribute="trailing" constant="10" id="w6R-jv-bFP"/>
                         </constraints>
@@ -311,7 +314,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackGround_SleepingMode" width="830" height="925"/>
+        <image name="BackGround_SleepingMode" width="830" height="795"/>
         <image name="chart.bar" catalog="system" width="64" height="44"/>
     </resources>
 </document>

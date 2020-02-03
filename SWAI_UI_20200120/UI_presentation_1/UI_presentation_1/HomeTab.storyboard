@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eUf-FO-wC0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eUf-FO-wC0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep With AI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-KJ-irx">
-                                <rect key="frame" x="88" y="57" width="259" height="45"/>
+                                <rect key="frame" x="88" y="94" width="259" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="259" id="J5t-W5-1fW"/>
                                     <constraint firstAttribute="height" constant="45" id="Omk-pU-sOK"/>
@@ -99,8 +99,8 @@
                             <constraint firstItem="si1-zZ-Tqk" firstAttribute="centerX" secondItem="VGt-fV-Ijf" secondAttribute="centerX" id="OGh-V4-UZw"/>
                             <constraint firstItem="Ca1-KJ-irx" firstAttribute="centerX" secondItem="VGt-fV-Ijf" secondAttribute="centerX" constant="30" id="OIc-Ax-hyX"/>
                             <constraint firstItem="7ql-Hh-KG2" firstAttribute="top" secondItem="VCc-XX-Grn" secondAttribute="bottom" constant="4" id="b8S-Rg-ViU"/>
+                            <constraint firstItem="Ca1-KJ-irx" firstAttribute="top" secondItem="fo4-I3-sIF" secondAttribute="top" constant="50" id="eH8-p6-QBV"/>
                             <constraint firstItem="NyR-RE-Cda" firstAttribute="top" secondItem="7ql-Hh-KG2" secondAttribute="bottom" constant="1.5" id="paS-qA-dnB"/>
-                            <constraint firstItem="Ca1-KJ-irx" firstAttribute="top" secondItem="fo4-I3-sIF" secondAttribute="top" constant="13" id="rub-gC-byR"/>
                             <constraint firstItem="NyR-RE-Cda" firstAttribute="centerY" secondItem="VGt-fV-Ijf" secondAttribute="centerY" constant="-20" id="tg2-jy-GpU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fo4-I3-sIF"/>
@@ -131,9 +131,8 @@
                                 <rect key="frame" x="-21" y="-19" width="519" height="749"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*careful*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Ky-ncm">
-                                <rect key="frame" x="12.5" y="154.5" width="350" height="27"/>
+                                <rect key="frame" x="10" y="154.5" width="355" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="2cW-mr-bh8"/>
                                     <constraint firstAttribute="height" constant="27" id="PQS-z5-MEP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
@@ -212,6 +211,7 @@
                             <constraint firstItem="aLK-gM-Lph" firstAttribute="centerX" secondItem="BUM-SZ-N5S" secondAttribute="centerX" id="6Mv-cn-xhI"/>
                             <constraint firstItem="ouy-l2-YtH" firstAttribute="top" secondItem="BUM-SZ-N5S" secondAttribute="top" constant="-19" id="Ddr-Q0-eix"/>
                             <constraint firstItem="ff3-Ky-ncm" firstAttribute="centerX" secondItem="BUM-SZ-N5S" secondAttribute="centerX" id="Ekt-Cm-lb8"/>
+                            <constraint firstItem="PxM-ip-ard" firstAttribute="trailing" secondItem="ff3-Ky-ncm" secondAttribute="trailing" constant="10" id="GxE-CR-Uom"/>
                             <constraint firstItem="IuX-rz-LEp" firstAttribute="centerX" secondItem="BUM-SZ-N5S" secondAttribute="centerX" id="LAi-DF-UgS"/>
                             <constraint firstItem="ouy-l2-YtH" firstAttribute="leading" secondItem="BUM-SZ-N5S" secondAttribute="leading" constant="-21" id="Rcd-hv-NSW"/>
                             <constraint firstItem="PxM-ip-ard" firstAttribute="trailing" secondItem="aLK-gM-Lph" secondAttribute="trailing" constant="10" id="SGS-Am-IHD"/>
@@ -222,6 +222,7 @@
                             <constraint firstItem="aLK-gM-Lph" firstAttribute="top" secondItem="ff3-Ky-ncm" secondAttribute="bottom" constant="3" id="hSx-pl-btV"/>
                             <constraint firstItem="sOV-hQ-izX" firstAttribute="top" secondItem="BUM-SZ-N5S" secondAttribute="top" constant="23" id="kHt-uL-XF1"/>
                             <constraint firstItem="IuX-rz-LEp" firstAttribute="top" secondItem="aLK-gM-Lph" secondAttribute="bottom" constant="7.5" id="ktb-8V-dzo"/>
+                            <constraint firstItem="ff3-Ky-ncm" firstAttribute="leading" secondItem="PxM-ip-ard" secondAttribute="leading" constant="10" id="mYo-Ca-vIJ"/>
                             <constraint firstItem="sOV-hQ-izX" firstAttribute="centerX" secondItem="BUM-SZ-N5S" secondAttribute="centerX" constant="-50" id="mbu-0f-Swd"/>
                             <constraint firstItem="aLK-gM-Lph" firstAttribute="centerY" secondItem="BUM-SZ-N5S" secondAttribute="centerY" constant="-80" id="mks-sl-XoA"/>
                             <constraint firstItem="oxh-pV-tC4" firstAttribute="top" secondItem="sOV-hQ-izX" secondAttribute="bottom" constant="8" symbolic="YES" id="snl-VV-Gvd"/>
@@ -248,7 +249,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="BackGround_SleepingMode" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-4x-Xeh">
-                                <rect key="frame" x="0.0" y="-70" width="1064" height="925"/>
+                                <rect key="frame" x="0.0" y="-70" width="375" height="737"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeping Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-lW-BhT">
                                 <rect key="frame" x="31" y="97" width="313" height="74"/>
@@ -339,13 +340,14 @@
                             <constraint firstItem="tBf-Z5-TAo" firstAttribute="centerY" secondItem="EoV-tF-aWY" secondAttribute="centerY" constant="190" id="L7L-Aw-f6U"/>
                             <constraint firstItem="y9d-S9-Yc2" firstAttribute="top" secondItem="EoV-tF-aWY" secondAttribute="top" constant="23" id="Mms-Tb-X6U"/>
                             <constraint firstItem="kxk-qT-3xJ" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" id="OCl-GD-8dm"/>
+                            <constraint firstAttribute="trailing" secondItem="zPr-4x-Xeh" secondAttribute="trailing" id="RKL-nR-abH"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" id="THd-AD-tfJ"/>
                             <constraint firstItem="zPr-4x-Xeh" firstAttribute="top" secondItem="EoV-tF-aWY" secondAttribute="top" constant="-70" id="WfN-S0-8OY"/>
+                            <constraint firstAttribute="bottom" secondItem="zPr-4x-Xeh" secondAttribute="bottom" id="a0r-w8-yGI"/>
                             <constraint firstItem="kxk-qT-3xJ" firstAttribute="centerY" secondItem="EoV-tF-aWY" secondAttribute="centerY" constant="-100" id="gSX-HK-98O"/>
                             <constraint firstItem="EZ9-Pn-EeX" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" constant="-80" id="h58-27-dgb"/>
                             <constraint firstItem="Ycv-lW-BhT" firstAttribute="top" secondItem="yIo-oY-kSp" secondAttribute="top" constant="53" id="i17-yB-Csw"/>
                             <constraint firstItem="hnw-Dt-yO5" firstAttribute="centerX" secondItem="EoV-tF-aWY" secondAttribute="centerX" constant="-33" id="sYA-vG-iaj"/>
-                            <constraint firstAttribute="trailing" secondItem="zPr-4x-Xeh" secondAttribute="trailing" constant="-689" id="zpt-p8-8bX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yIo-oY-kSp"/>
                     </view>
@@ -378,7 +380,7 @@
     </scenes>
     <resources>
         <image name="BackGround" width="834" height="1112"/>
-        <image name="BackGround_SleepingMode" width="830" height="925"/>
+        <image name="BackGround_SleepingMode" width="830" height="795"/>
         <image name="charging" width="256" height="256"/>
         <image name="day-2" width="512" height="512"/>
         <image name="house" catalog="system" width="64" height="54"/>
