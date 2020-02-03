@@ -24,7 +24,6 @@ I Don't Care Mode is for who doesn't need to wake up at certain time. Very oppos
 ## Built With
 
 * [Realm](http://www.realm.io/) - For User's Sleeping Data Process
-* [Firebase](https://firebase.google.com/) - User Analytics
 * [CoreML](https://developer.apple.com/documentation/coreml) - Classifying Sleeping Status
 
 ## Authors
