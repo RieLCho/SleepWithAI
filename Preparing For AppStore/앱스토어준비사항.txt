@@ -1,0 +1,8 @@
+https://github.com/ProjectInTheClass/SleepWithAI
+
+1. 앱 이름, 부제: SleepWithAI, SWAI
+2. 앱 카테고리 (첨부 사진 참고, 최대 2개): 건강 및 피트니스
+3. 앱에 대한 설명(소개문) - 최대 4000자(지만 3줄 이상 정도로만 올려주시면 됩니당!): SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficient with personal optimized data. SWAI will recommend and turn on the alarm at best time to wake up.
+4. 앱 키워드 (예를 들어 여행에 관련된 앱이면 여행, 플랜, 대중교통, 트립 등) - 검색 결과를 정확하게 하는 데 도와줍니다.:sleep, record, alarm
+6. 
+
