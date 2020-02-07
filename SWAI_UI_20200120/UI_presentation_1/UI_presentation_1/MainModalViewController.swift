@@ -11,12 +11,19 @@ import AVKit
 import SoundAnalysis
 import RealmSwift
 
+protocol sendRealWakeUpTimeDelegate {
+    func timeReceived(time: String)
+}
+
 class MainModalViewController: UIViewController {
     private let audioEngine = AVAudioEngine()
     private var soundClassifier = SleepSoundClassification()
     public var sleepTime: Int?
     private var toWakeUp:Date? = Date()
     private var audioPlayer: AVAudioPlayer? = nil
+    
+    var stringOfRealWakeUpTime: String? = nil
+    var delegate: sendRealWakeUpTimeDelegate?
     
     struct SleepSoundUnit {
         var identifier: String
@@ -180,6 +187,16 @@ extension MainModalViewController: SoundClassifierDelegate {
                     self.audioEngine.stop()
                     var songNumber:Int = UserDefaults.standard.integer(forKey: "song")
                     print(songNumber)
+                    
+                    // MARK: - getWakeUpTime
+                    let realWakeUpTime = Date()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "hh:mm:ss"
+                    self.stringOfRealWakeUpTime = dateFormatter.string(from: realWakeUpTime)
+                    delegate?.timeReceived(time: stringOfRealWakeUpTime!)
+                    dismiss(animated: true, completion: nil)
+                    //print("wake up time : \(String(describing: self.stringOfRealWakeUpTime))")
+                    
                     if songNumber == 1{
                         var path = Bundle.main.url(forResource: "SundayBoomBap", withExtension: "mp3")
                         self.audioPlayer = try? AVAudioPlayer(contentsOf: path!)

@@ -72,6 +72,13 @@
                             <constraint firstAttribute="height" constant="20" id="Ego-7d-cnE"/>
                         </constraints>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-dq-2FQ">
+                        <rect key="frame" x="262" y="84" width="39" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vHJ-cD-jIJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0TA-YI-XEB"/>
@@ -82,7 +89,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="titleLabel" destination="2oG-SK-j5N" id="8XI-of-HjQ"/>
+                <outlet property="titleLabel" destination="WoL-dq-2FQ" id="XK0-3D-v3B"/>
+                <outlet property="wakeUpLabel" destination="WoL-dq-2FQ" id="a8o-0y-dAN"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </tableViewCell>

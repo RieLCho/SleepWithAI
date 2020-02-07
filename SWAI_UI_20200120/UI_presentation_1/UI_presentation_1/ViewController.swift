@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                 }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "sleeptalking" {
                     self.secondsOfIdentifier[1] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else if self.dataSourceForWholeData[i].sleepData[j].identifier == "background" {
-                    self.secondsOfIdentifier[3] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
+                    self.secondsOfIdentifier[2] += (self.dataSourceForWholeData[i].sleepData[j].endedSecond - self.dataSourceForWholeData[i].sleepData[j].startedSecond)
                 }else {
                     continue
                 }
@@ -72,13 +72,6 @@ class ViewController: UIViewController {
     
     private func colorsOfPieCharts(numbersOfColor: Int) -> [UIColor] {
         let colors: [UIColor] = [colorOfSnoringData,colorOfSleeptalkingData,colorOfBackgroundData]
-        /*for _ in 0..<numbersOfColor {
-          let red = Double(arc4random_uniform(256))
-          let green = Double(arc4random_uniform(256))
-          let blue = Double(arc4random_uniform(256))
-          let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-          colors.append(color)
-        }*/
         return colors
     }
         
