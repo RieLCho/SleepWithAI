@@ -1,7 +1,8 @@
 # SleepWithAI
 ![Icon-1024](./AppStore_res/AppIcon/appIconSet/Icon-512.png)  
 
-SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data. SWAI will recommend and turn on the alram at best time to wake up.
+SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data.  
+SWAI will recommend and turn on the alram at best time to wake up.
 
 ## Getting Started
 
@@ -9,23 +10,27 @@ You can see more detailed function at [SWAI Marketing Website](https://projectin
 
 ### Installation
 
-You can install on iOS devices at [Apple App Store](https://apps.apple.com/app/id1498395373). (iOS 13+)
+You can install on iOS devices at [Apple App Store](https://apps.apple.com/app/id1498395373). (iOS 13+, iPad also supported.)
 
 ### How this Application Wake User
 
-There are two main modes to wake up.
+First of all, iPhone/iPad should be charged during sleeping.  
+SWAI will indicate what's going on while you are sleeping with microphone recording.  
+There are two main modes to wake up, **Normal mode** and **I Don't Care mode**.
 
 * **Normal Sleep Mode**
 
 ![NormalMode](./AppStore_res/readme/Normal.png)  
 
-Normal Sleep Mode is for who needs to wake up at certain time. User can set time at Home tab with date picker. After clicking 'Sleep Now' button, SWAI will automatically record your sleeping sound and classify with CoreML machine learning model.
+Normal Sleep Mode is for who needs to wake up at certain time.  
+User can set time at Home tab with date picker.  
 
 * **I Don't Care Mode (A.K.A. IDC)**
 
 ![IDCMode](./AppStore_res/readme/IDC.png)  
 
-I Don't Care Mode is for who doesn't need to wake up at certain time. Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up. SWAI will automatically get optimized sleep duration time and wake user up.
+I Don't Care Mode is for who doesn't need to wake up at certain time.  
+Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up.  
 
 ## Built With
 
