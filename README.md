@@ -8,14 +8,15 @@ SWAI will recommend & turn on the alram at best time to wake up.
 
 You can see more detailed function at [SWAI Marketing Website](https://projectintheclass.github.io/SleepWithAI/)
 
-### Installation
-
-You can install on iOS devices (iOS 13+, iPad also supported.)  
+### Installation 
 
 [![download][1]]([2])
 
 [1]:AppStore_res/readme/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg
 [2]:https://apps.apple.com/app/id1498395373
+
+
+You can install on iOS devices (iOS 13+, iPad also supported.) 
 
 ### How this Application Wake User
 
