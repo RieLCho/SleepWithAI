@@ -1,5 +1,5 @@
 # SleepWithAI
-![Icon-1024](./PreparingForAppStore/AppIcon/Icon-1024.png)  
+![Icon-1024](./AppStore_res/AppIcon/Icon-1024.png)  
 
 SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data. SWAI will recommend and turn on the alram at best time to wake up.
 
@@ -17,9 +17,13 @@ There are two main modes to wake up.
 
 * **Normal Sleep Mode**
 
+![NormalMode](./AppStore_res/readme/Normal.png)  
+
 Normal Sleep Mode is for who needs to wake up at certain time. User can set time at Home tab with date picker. After clicking 'Sleep Now' button, SWAI will automatically record your sleeping sound and classify with CoreML machine learning model.
 
 * **I Don't Care Mode (A.K.A. IDC)**
+
+![IDCMode](./AppStore_res/readme/IDC.png)  
 
 I Don't Care Mode is for who doesn't need to wake up at certain time. Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up. SWAI will automatically get optimized sleep duration time and wake user up.
 
@@ -46,6 +50,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* [sleepyti.me](https://www.sleepyti.me/) - Quite different from our project, but initial idea was from this website.
+* [Sleepyti.me](https://www.sleepyti.me/) - Quite different from our project, but initial idea was from this website.
 * [Charts](https://github.com/danielgindi/Charts) - Used Cocoapod Framework for showing sleeping sound data to user.
 * [Sleep Foundation](https://www.sleepfoundation.org/press-release/national-sleep-foundation-recommends-new-sleep-times)
