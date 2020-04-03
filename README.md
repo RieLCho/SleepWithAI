@@ -10,7 +10,7 @@ You can see more detailed function at [SWAI Marketing Website](https://projectin
 
 ### Installation 
 
-[![download][1]]([2])
+[![download][1]][2]
 
 [1]:AppStore_res/readme/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg
 [2]:https://apps.apple.com/app/id1498395373
