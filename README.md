@@ -12,7 +12,10 @@ You can see more detailed function at [SWAI Marketing Website](https://projectin
 
 You can install on iOS devices (iOS 13+, iPad also supported.)  
 
-[![downloadAppStore](./Appstore_res/readme/appstore.png)](https://apps.apple.com/app/id1498395373)  
+[![download][1]][2]
+
+[1]:./Appstore_res/readme/appstore.png
+[2]:https://apps.apple.com/app/id1498395373
 
 ### How this Application Wake User
 
