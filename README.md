@@ -17,7 +17,7 @@ There are two main modes to wake up.
 
 * **Normal Sleep Mode**
 
-![NormalMode](./AppStore_res/readme/Normal.png)  
+![NormalMode](./AppStore_res/AppIcon/appIconSet/Icon-512.png)  
 
 Normal Sleep Mode is for who needs to wake up at certain time. User can set time at Home tab with date picker. After clicking 'Sleep Now' button, SWAI will automatically record your sleeping sound and classify with CoreML machine learning model.
 
