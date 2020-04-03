@@ -1,5 +1,5 @@
 # SleepWithAI
-![Icon-1024](./AppStore_res/AppIcon/Icon-1024.png)  
+![Icon-1024](./AppStore_res/AppIcon/appIconSet/Icon-512.png)  
 
 SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data. SWAI will recommend and turn on the alram at best time to wake up.
 
@@ -17,7 +17,7 @@ There are two main modes to wake up.
 
 * **Normal Sleep Mode**
 
-![NormalMode](./AppStore_res/AppIcon/appIconSet/Icon-512.png)  
+![NormalMode](./AppStore_res/readme/Normal.png)  
 
 Normal Sleep Mode is for who needs to wake up at certain time. User can set time at Home tab with date picker. After clicking 'Sleep Now' button, SWAI will automatically record your sleeping sound and classify with CoreML machine learning model.
 
