@@ -1,8 +1,8 @@
 # SleepWithAI
 ![Icon](./AppStore_res/AppIcon/appIconSet/Icon-256.png)  
 
-SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data.  
-SWAI will recommend and turn on the alram at best time to wake up.
+**SleepWIthAI(A.K.A. SWAI)** is application for users who want to sleep efficient with personally optimized data.  
+SWAI will recommend & turn on the alram at best time to wake up.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ See also the list of [contributors](https://github.com/ProjectInTheClass/SleepWi
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 ## Acknowledgments
 
