@@ -1,7 +1,7 @@
 # SleepWithAI
 ![Icon](./AppStore_res/AppIcon/appIconSet/Icon-256.png)  
 
-**SleepWIthAI(A.K.A. SWAI)** is application for users who want to sleep efficient with personally optimized data.  
+**SleepWIthAI(A.K.A. SWAI)** is application for users who want to sleep efficient based on personally optimized data.  
 SWAI will recommend & turn on the alram at best time to wake up.
 
 ## Getting Started
