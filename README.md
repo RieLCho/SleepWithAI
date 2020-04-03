@@ -1,4 +1,6 @@
 # SleepWithAI
+![Icon-1024](./PreparingForAppStore/AppIcon/Icon-1024.png)  
+
 SleepWIthAI(A.K.A. SWAI) is application for users who want to sleep efficiently with personally optimized data. SWAI will recommend and turn on the alram at best time to wake up.
 
 ## Getting Started
@@ -44,6 +46,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* sleepyti.me - Quite different from our project, but initial idea was from this website.
+* [sleepyti.me](https://www.sleepyti.me/) - Quite different from our project, but initial idea was from this website.
 * [Charts](https://github.com/danielgindi/Charts) - Used Cocoapod Framework for showing sleeping sound data to user.
 * [Sleep Foundation](https://www.sleepfoundation.org/press-release/national-sleep-foundation-recommends-new-sleep-times)
