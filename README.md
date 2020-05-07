@@ -49,7 +49,7 @@ Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up.
 
 * **Yeonji Lim** - [Github](https://github.com/Ymin-dgnn)
 
-* **Yangjin Cho** - [Github](https://github.com/sheepjin99) / [Twitter](https://twitter.com/Kraint_) / [Facebook](https://www.facebook.com/profile.php?id=100014648160911) / [Blog](https://sheepjin99.tistory.com)
+* **Yangjin Cho** - [Github](https://github.com/sheepjin99) / [Twitter](https://twitter.com/Kraint_Dev) / [Facebook](https://www.facebook.com/profile.php?id=100014648160911) / [Blog](https://sheepjin99.tistory.com)
 
 
 See also the list of [contributors](https://github.com/ProjectInTheClass/SleepWithAI/pulse) who participated in this project.
