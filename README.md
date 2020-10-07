@@ -1,7 +1,7 @@
 # SleepWithAI
 ![Icon](./AppStore_res/AppIcon/appIconSet/Icon-256.png)  
 
-**SleepWIthAI(A.K.A. SWAI)** is application for users who want to sleep efficient based on personally optimized data.  
+**SleepWIthAI(A.K.A. SWAI)** is application iOS alarm app with personal data, powered by Core ML - Sound Classification.  
 SWAI will recommend & turn on the alram at best time to wake up.
 
 ## Getting Started
@@ -49,7 +49,7 @@ Very opposite from Normal Sleep Mode, user doesn't need to set time to wake up.
 
 * **Yeonji Lim** - [Github](https://github.com/Ymin-dgnn)
 
-* **Yangjin Cho** - [Github](https://github.com/sheepjin99) / [Twitter](https://twitter.com/kraint_cho) / [Facebook](https://www.facebook.com/profile.php?id=100014648160911) / [Blog](https://sheepjin99.tistory.com)
+* **Yangjin Cho** - [Github](https://github.com/sheepjin99) / [Twitter](https://twitter.com/riel_dev) / [Facebook](https://www.facebook.com/profile.php?id=100014648160911) / [Blog](https://sheepjin99.tistory.com)
 
 
 See also the list of [contributors](https://github.com/ProjectInTheClass/SleepWithAI/pulse) who participated in this project.
