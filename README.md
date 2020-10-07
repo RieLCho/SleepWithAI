@@ -16,7 +16,7 @@ You can see more detailed function at [SWAI Marketing Website](https://projectin
 [2]:https://apps.apple.com/app/id1498395373
 
 
-You can install on iOS devices (iOS 13+, iPad also supported.) 
+You can install on iOS devices (iOS 14+, iPad also supported.) 
 
 ### How this Application Wake User
 
